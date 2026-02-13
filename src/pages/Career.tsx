@@ -38,9 +38,9 @@ const Career = () => {
         <div className="w-full px-6 md:px-12 lg:px-24 max-w-4xl mx-auto space-y-6">
           <Accordion type="single" collapsible className="w-full space-y-4">
             {jobs.map((job) => (
-              <AccordionItem key={job.id} value={job.id} className="relative overflow-hidden border border-[#7CB8EB] rounded-lg bg-white px-6 data-[state=open]:shadow-md transition-all duration-300 hover:bg-[#7CB8EB]/70 hover:border-[#5a9bc9] group">
-                {/* Noise texture overlay - visible on hover */}
-                <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none"></div>
+              <AccordionItem key={job.id} value={job.id} className="relative overflow-hidden border border-[#7CB8EB] rounded-lg bg-white px-6 data-[state=open]:shadow-md transition-all duration-300 data-[state=closed]:hover:bg-[#7CB8EB]/70 data-[state=closed]:hover:border-[#5a9bc9] group">
+                {/* Noise texture overlay - visible on hover only when closed */}
+                <div className="absolute inset-0 noise-texture opacity-0 group-hover:group-data-[state=closed]:opacity-60 transition-opacity duration-300 pointer-events-none"></div>
                 <AccordionTrigger className="hover:no-underline py-4 text-left relative z-10">
                   <span className="text-lg font-semibold text-foreground">{job.title}</span>
                 </AccordionTrigger>
