@@ -4,6 +4,12 @@ import { jobs } from "@/data/jobs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { MapPin, Briefcase, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -30,24 +36,42 @@ const Career = () => {
 
       <section className="py-16 bg-background">
         <div className="w-full px-6 md:px-12 lg:px-24 max-w-4xl mx-auto space-y-6">
-          {jobs.map((job) => (
-            <div key={job.id} className="relative overflow-hidden bg-card border rounded-lg p-6 group hover:bg-[#7CB8EB] transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              {/* Noise texture overlay on hover */}
-              <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-90 transition-opacity duration-300 pointer-events-none"></div>
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {jobs.map((job) => (
+              <AccordionItem key={job.id} value={job.id} className="border border-[#7CB8EB] rounded-lg bg-white px-6 data-[state=open]:shadow-md transition-all duration-300">
+                <AccordionTrigger className="hover:no-underline py-4 text-left">
+                  <span className="text-lg font-semibold text-foreground">{job.title}</span>
+                </AccordionTrigger>
+                <AccordionContent className="pb-6">
+                  <div className="space-y-4 pt-2">
+                    <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                      <span className="flex items-center gap-1"><MapPin className="h-4 w-4 text-[#7CB8EB]" /> {job.location}</span>
+                      <span className="flex items-center gap-1"><Briefcase className="h-4 w-4 text-[#7CB8EB]" /> {job.type}</span>
+                    </div>
 
-              <div className="relative z-10 flex flex-wrap items-start justify-between gap-4">
-                <div>
-                  <h2 className="text-xl font-bold group-hover:text-white transition-colors duration-300">{job.title}</h2>
-                  <div className="flex flex-wrap gap-3 mt-2 text-sm text-muted-foreground group-hover:text-white/80 transition-colors duration-300">
-                    <span className="flex items-center gap-1"><MapPin className="h-4 w-4" /> {job.location}</span>
-                    <span className="flex items-center gap-1"><Briefcase className="h-4 w-4" /> {job.type}</span>
+                    <p className="text-muted-foreground">{job.description}</p>
+
+                    {job.details && (
+                      <ul className="list-disc list-inside space-y-1 text-muted-foreground ml-2">
+                        {job.details.map((detail, index) => (
+                          <li key={index}>{detail}</li>
+                        ))}
+                      </ul>
+                    )}
+
+                    <div className="pt-2">
+                      <Button
+                        onClick={() => setApplyingTo(job.id)}
+                        className="bg-[#7CB8EB] hover:bg-[#5a9bc9] text-white"
+                      >
+                        Apply Now
+                      </Button>
+                    </div>
                   </div>
-                  <p className="text-muted-foreground mt-3 text-sm group-hover:text-white/90 transition-colors duration-300">{job.description}</p>
-                </div>
-                <Button onClick={() => setApplyingTo(job.id)} className="bg-primary text-primary-foreground shrink-0 group-hover:bg-white group-hover:text-[#7CB8EB] transition-colors duration-300 shadow-md">Apply Now</Button>
-              </div>
-            </div>
-          ))}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
 

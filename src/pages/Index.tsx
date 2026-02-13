@@ -172,7 +172,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Us Preview Section */}
+      {/* About Us Section */}
       <section className="py-20 bg-muted/30">
         <div className="w-full px-6 md:px-12 lg:px-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
