@@ -30,29 +30,66 @@ const About = () => (
 
     {/* Story */}
     <section className="py-16">
-      <div className="container mx-auto px-4 max-w-3xl">
+      <div className="container mx-auto px-4 max-w-4xl">
         <h2 className="text-3xl font-bold mb-6">Our Story</h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
-          Shreeji Cooling System Pvt. Ltd. was founded with a simple mission: to provide world-class cooling solutions to businesses across India. Starting as a small team of HVAC enthusiasts, we have grown into a trusted name serving malls, offices, factories, and large commercial establishments.
+          Shreeji Cooling System Pvt. Ltd. was founded with a simple mission: to provide world-class cooling solutions to businesses across India. As an authorized channel partner of <span className="font-semibold text-foreground">Blue Star Limited</span>, we've built our reputation on delivering comprehensive HVAC facilities management services for commercial and industrial sectors.
+        </p>
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          Our expertise spans the complete spectrum of cooling solutions—from VRF systems and chillers to commercial refrigeration and cold storage. We provide end-to-end services including installation, maintenance, and 24/7 support, backed by a team of highly qualified engineers and skilled technicians.
         </p>
         <p className="text-muted-foreground leading-relaxed">
-          Today, with over 15 years of experience and 500+ successful projects, we continue to innovate and deliver excellence in air conditioning, chiller systems, ducting, and complete HVAC solutions.
+          Today, with <span className="font-semibold text-foreground">750+ successful projects</span> and <span className="font-semibold text-foreground">1000+ installations</span> across diverse industries, we continue to innovate and deliver excellence. Our commitment to quality, reliability, and customer satisfaction has made us a trusted HVAC partner for businesses nationwide.
         </p>
       </div>
     </section>
 
     {/* Mission & Vision */}
-    <section className="py-16 bg-background border-y border-border">
-      <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 max-w-4xl">
-        <div className="bg-card p-8 rounded-lg shadow-sm">
-          <Target className="h-10 w-10 text-accent mb-4" />
-          <h3 className="text-xl font-bold mb-3">Our Mission</h3>
-          <p className="text-muted-foreground">To deliver reliable, energy-efficient, and cost-effective HVAC solutions that exceed client expectations while maintaining the highest standards of safety and quality.</p>
+    <section className="py-20 bg-gradient-to-br from-background via-muted/20 to-background">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3">Our Mission & Vision</h2>
+          <p className="text-muted-foreground text-lg">Guiding principles that drive our commitment to excellence</p>
         </div>
-        <div className="bg-card p-8 rounded-lg shadow-sm">
-          <Eye className="h-10 w-10 text-accent mb-4" />
-          <h3 className="text-xl font-bold mb-3">Our Vision</h3>
-          <p className="text-muted-foreground">To be India's most trusted HVAC solutions provider, known for innovation, sustainability, and customer-first service in every project we undertake.</p>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Mission Card */}
+          <div className="group relative overflow-hidden bg-gradient-to-br from-[#7CB8EB] to-[#5a9fd4] p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+            {/* Noise texture overlay */}
+            <div className="absolute inset-0 noise-texture opacity-60"></div>
+
+            <div className="relative z-10 text-center">
+              <div className="mb-6 inline-block p-3 bg-white/20 rounded-2xl backdrop-blur-sm">
+                <Target className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-white">Our Mission</h3>
+              <p className="text-white/95 leading-relaxed text-base">
+                To deliver reliable, energy-efficient, and cost-effective HVAC solutions that exceed client expectations while maintaining the highest standards of safety and quality. We are committed to providing comprehensive facilities management services that ensure optimal performance and long-term value.
+              </p>
+            </div>
+
+            {/* Decorative element */}
+            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+          </div>
+
+          {/* Vision Card */}
+          <div className="group relative overflow-hidden bg-gradient-to-br from-[#7CB8EB] to-[#5a9fd4] p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+            {/* Noise texture overlay */}
+            <div className="absolute inset-0 noise-texture opacity-60"></div>
+
+            <div className="relative z-10 text-center">
+              <div className="mb-6 inline-block p-3 bg-white/20 rounded-2xl backdrop-blur-sm">
+                <Eye className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-white">Our Vision</h3>
+              <p className="text-white/95 leading-relaxed text-base">
+                To be India's most trusted HVAC solutions provider, known for innovation, sustainability, and customer-first service in every project we undertake. We envision a future where our cutting-edge cooling technologies contribute to a greener, more energy-efficient India.
+              </p>
+            </div>
+
+            {/* Decorative element */}
+            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+          </div>
         </div>
       </div>
     </section>
