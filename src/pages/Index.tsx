@@ -172,21 +172,71 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Us Section */}
+      {/* About Us Section with Products */}
       <section className="py-20 bg-muted/30">
         <div className="w-full px-6 md:px-12 lg:px-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Side - Product Grid (3x2) */}
             <div className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://images.unsplash.com/photo-1531973576160-7125cdcd63e7?w=800&h=600&fit=crop"
-                  alt="Our Team"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                />
+              <div className="grid grid-cols-3 gap-4">
+                {[
+                  {
+                    icon: "https://images.unsplash.com/photo-1631545806609-4b0e36b4e0c9?w=300&h=300&fit=crop",
+                    title: "VRF SYSTEMS",
+                    category: "HVAC Equipment"
+                  },
+                  {
+                    icon: "https://images.unsplash.com/photo-1635274531661-1c5c6e0d6e3c?w=300&h=300&fit=crop",
+                    title: "DUCTED SYSTEMS",
+                    category: "Ductable Systems"
+                  },
+                  {
+                    icon: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=300&h=300&fit=crop",
+                    title: "CHILLERS",
+                    category: "Chillers"
+                  },
+                  {
+                    icon: "https://images.unsplash.com/photo-1585909695284-32d2985ac9c0?w=300&h=300&fit=crop",
+                    title: "ROOM AIR CONDITIONERS",
+                    category: "Air Conditioners"
+                  },
+                  {
+                    icon: "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=300&h=300&fit=crop",
+                    title: "COMMERCIAL REFRIGERATION",
+                    category: "HVAC Equipment"
+                  },
+                  {
+                    icon: "https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=300&h=300&fit=crop",
+                    title: "COLD STORAGE",
+                    category: "Chillers"
+                  }
+                ].map((product, idx) => (
+                  <Link
+                    key={product.title}
+                    to={`/products?category=${encodeURIComponent(product.category)}`}
+                    className="group relative bg-card rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/30 hover:-translate-y-1 cursor-pointer"
+                  >
+                    {/* Product Image */}
+                    <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-[#7CB8EB]/10 to-[#7CB8EB]/5">
+                      <img
+                        src={product.icon}
+                        alt={product.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+
+                    {/* Product Title */}
+                    <div className="p-3 text-center bg-card">
+                      <h3 className="font-bold text-xs text-foreground group-hover:text-primary transition-colors duration-300">
+                        {product.title}
+                      </h3>
+                    </div>
+                  </Link>
+                ))}
               </div>
-              {/* Experience Badge removed */}
             </div>
 
+            {/* Right Side - Company Information */}
             <div className="text-left">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground leading-tight">
                 India's Leading Trusted <br /><span className="text-primary">HVAC Solutions Provider</span>

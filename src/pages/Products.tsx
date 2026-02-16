@@ -1,12 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { products, categories } from "@/data/products";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { Snowflake } from "lucide-react";
 
 const Products = () => {
-  const [active, setActive] = useState("All");
+  const [searchParams] = useSearchParams();
+  const categoryParam = searchParams.get("category");
+  const [active, setActive] = useState(categoryParam || "All");
+
+  // Update active category when URL changes
+  useEffect(() => {
+    if (categoryParam && categories.includes(categoryParam)) {
+      setActive(categoryParam);
+    }
+  }, [categoryParam]);
+
   const filtered = active === "All" ? products : products.filter((p) => p.category === active);
 
   return (
