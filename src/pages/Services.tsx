@@ -3,6 +3,12 @@ import { services } from "@/data/services";
 import { Snowflake, Wrench, Wind, ClipboardList, Settings, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const iconMap: Record<string, React.ElementType> = { Snowflake, Wrench, Wind, ClipboardList, Settings };
 
@@ -46,43 +52,75 @@ const Services = () => (
       </div>
     </section>
 
-    {/* Comprehensive AMC Benefits (New) */}
+    {/* FAQ Section */}
     <section className="py-20 bg-muted/30">
-      <div className="w-full px-6 md:px-12 lg:px-24">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Our AMC?</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Annual Maintenance Contracts designed to give you peace of mind.</p>
+      <div className="w-full px-6 md:px-12 lg:px-24 max-w-4xl mx-auto">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Everything you need to know about our HVAC services.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div className="bg-background border rounded-3xl p-10 shadow-sm flex flex-col justify-center">
-            <h3 className="text-2xl font-bold mb-8 text-primary">Comprehensive Coverage</h3>
-            <ul className="space-y-5">
-              {[
-                "Priority breakdown support within 4 hours",
-                "4 free preventive maintenance services per year",
-                "Unlimited breakdown calls included",
-                "Genuine spare parts replacement warranty"
-              ].map((item, i) => (
-                <li key={i} className="flex items-center gap-4">
-                  <div className="h-8 w-8 rounded-full bg-green-100 flex items-center justify-center shrink-0">
-                    <CheckCircle className="h-5 w-5 text-green-600" />
-                  </div>
-                  <span className="text-lg">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <Link to="/contact">
-              <Button className="mt-10 w-fit" size="lg">Request AMC Quote</Button>
-            </Link>
-          </div>
-          <div className="rounded-3xl overflow-hidden shadow-2xl h-full min-h-[400px]">
-            <img
-              src="https://images.unsplash.com/photo-1621905252507-b35492ccba0b?w=800&h=600&fit=crop"
-              alt="Technician servicing AC"
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-            />
-          </div>
+        <Accordion type="single" collapsible className="w-full space-y-4">
+          {[
+            {
+              q: "What types of HVAC systems do you supply and install?",
+              a: "We supply and install a full range of HVAC systems including VRF/VRV systems, ducted split systems, chillers, room air conditioners, commercial refrigeration units, and cold storage solutions — all sourced from Blue Star, India's leading HVAC brand."
+            },
+            {
+              q: "Do you offer Annual Maintenance Contracts (AMC)?",
+              a: "Yes. Our AMC plans include scheduled preventive maintenance visits, priority breakdown support within 4 hours, unlimited service calls, and genuine spare parts warranty — keeping your systems running at peak efficiency year-round."
+            },
+            {
+              q: "How long does a typical HVAC installation take?",
+              a: "Installation timelines vary by project size. A standard split or ducted system installation takes 1–3 days. Large-scale VRF or chiller projects for commercial spaces may take 2–6 weeks depending on site complexity and equipment availability."
+            },
+            {
+              q: "Are you authorised dealers for Blue Star products?",
+              a: "Yes, Shreeji Cooling System Pvt. Ltd. is an authorised channel partner of Blue Star Limited. This means you receive genuine products, factory-backed warranties, and certified installation services."
+            },
+            {
+              q: "What industries do you serve?",
+              a: "We serve a wide range of sectors including corporate offices, shopping malls, retail stores, manufacturing plants, hospitals, hotels, IT parks, pharmaceutical warehouses, and cold chain logistics facilities."
+            },
+            {
+              q: "Do you provide emergency breakdown support?",
+              a: "Absolutely. Our AMC clients receive priority 4-hour response for breakdowns. Non-AMC clients can also reach our support team 24/7 for emergency service calls — we understand that HVAC downtime can be critical for your business."
+            },
+            {
+              q: "Can you handle large-scale turnkey HVAC projects?",
+              a: "Yes. We provide end-to-end turnkey project execution — from site survey, design, and engineering to procurement, installation, commissioning, and post-installation support. Our team has successfully delivered 750+ projects across India."
+            },
+            {
+              q: "How do I get a quote for my project?",
+              a: "Simply click the 'Get a Quote' button on any service, fill out our inquiry form, or call us directly. Our engineers will conduct a free site assessment and provide a detailed, transparent quotation tailored to your requirements."
+            }
+          ].map((faq, i) => (
+            <AccordionItem
+              key={i}
+              value={`faq-${i}`}
+              className="relative overflow-hidden border border-[#7CB8EB] rounded-xl bg-white px-6 data-[state=open]:shadow-md transition-all duration-300 data-[state=closed]:hover:bg-[#7CB8EB]/70 data-[state=closed]:hover:border-[#5a9bc9] group"
+            >
+              {/* Noise texture overlay */}
+              <div className="absolute inset-0 noise-texture opacity-0 group-hover:group-data-[state=closed]:opacity-60 transition-opacity duration-300 pointer-events-none"></div>
+              <AccordionTrigger className="hover:no-underline py-5 text-left relative z-10">
+                <span className="text-base font-semibold text-foreground pr-4">{faq.q}</span>
+              </AccordionTrigger>
+              <AccordionContent className="pb-5 relative z-10">
+                <p className="text-muted-foreground leading-relaxed">{faq.a}</p>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+
+        <div className="text-center mt-12">
+          <p className="text-muted-foreground mb-4">Still have questions? We're happy to help.</p>
+          <Link to="/contact">
+            <Button size="lg" className="bg-primary text-primary-foreground font-semibold px-8 rounded-full shadow-md hover:shadow-lg transition-all">
+              Contact Our Team
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
