@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Snowflake, Wrench, ClipboardList, Settings, Building2, Factory, Store, Landmark, ArrowRight, CheckCircle2, Award, Users, TrendingUp, MapPin, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { Snowflake, Wrench, ClipboardList, Settings, Building2, Factory, Store, Landmark, ArrowRight, CheckCircle2, Award, Users, TrendingUp, MapPin, ChevronLeft, ChevronRight, X, Wind, AirVent, Fan, Refrigerator, ThermometerSnowflake } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const stats = [
@@ -343,48 +343,45 @@ const Index = () => {
               <div className="grid grid-cols-3 gap-4">
                 {[
                   {
-                    icon: "https://images.unsplash.com/photo-1631545806609-4b0e36b4e0c9?w=300&h=300&fit=crop",
+                    icon: Wind,
                     title: "VRF SYSTEMS",
                     category: "HVAC Equipment"
                   },
                   {
-                    icon: "https://images.unsplash.com/photo-1635274531661-1c5c6e0d6e3c?w=300&h=300&fit=crop",
+                    icon: AirVent,
                     title: "DUCTED SYSTEMS",
                     category: "Ductable Systems"
                   },
                   {
-                    icon: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=300&h=300&fit=crop",
+                    icon: Snowflake,
                     title: "CHILLERS",
                     category: "Chillers"
                   },
                   {
-                    icon: "https://images.unsplash.com/photo-1585909695284-32d2985ac9c0?w=300&h=300&fit=crop",
+                    icon: Fan,
                     title: "ROOM AIR CONDITIONERS",
                     category: "Air Conditioners"
                   },
                   {
-                    icon: "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=300&h=300&fit=crop",
+                    icon: Refrigerator,
                     title: "COMMERCIAL REFRIGERATION",
                     category: "HVAC Equipment"
                   },
                   {
-                    icon: "https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=300&h=300&fit=crop",
+                    icon: ThermometerSnowflake,
                     title: "COLD STORAGE",
                     category: "Chillers"
                   }
-                ].map((product, idx) => (
+                ].map((product) => (
                   <Link
                     key={product.title}
                     to={`/products?category=${encodeURIComponent(product.category)}`}
                     className="group relative bg-card rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/30 hover:-translate-y-1 cursor-pointer"
                   >
-                    {/* Product Image */}
-                    <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-[#7CB8EB]/10 to-[#7CB8EB]/5">
-                      <img
-                        src={product.icon}
-                        alt={product.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
+                    {/* Product Icon */}
+                    <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-[#7CB8EB]/10 to-[#7CB8EB]/5 flex items-center justify-center group-hover:from-[#7CB8EB] group-hover:to-[#5a9fd4] transition-all duration-300">
+                      <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none"></div>
+                      <product.icon className="h-16 w-16 text-[#7CB8EB] group-hover:text-white transition-colors duration-300 relative z-10" strokeWidth={1.5} />
                     </div>
 
                     {/* Product Title */}
