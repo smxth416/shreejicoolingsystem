@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import { services } from "@/data/services";
-import { Snowflake, Wrench, Wind, ClipboardList, Settings, CheckCircle } from "lucide-react";
+import { CheckCircle, ClipboardList, Wrench, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import {
@@ -9,8 +9,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
-const iconMap: Record<string, React.ElementType> = { Snowflake, Wrench, Wind, ClipboardList, Settings };
 
 const Services = () => (
   <Layout>
@@ -23,32 +21,45 @@ const Services = () => (
       </div>
     </section>
 
-    <section className="py-16 bg-background">
-      <div className="w-full px-6 md:px-12 lg:px-24 space-y-16 max-w-7xl mx-auto">
-        {services.map((s, i) => {
-          const Icon = iconMap[s.icon as string] || Snowflake;
-          return (
-            <div key={s.title} className={`flex flex-col md:flex-row gap-8 items-start ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
-              <div className="bg-muted rounded-2xl p-8 flex items-center justify-center shrink-0 w-full md:w-auto h-40 md:h-auto aspect-square">
-                <Icon className="h-16 w-16 text-primary" />
-              </div>
-              <div className="flex-1">
-                <h2 className="text-3xl font-bold mb-4">{s.title}</h2>
-                <p className="text-muted-foreground mb-6 text-lg">{s.description}</p>
-                <ul className="space-y-3 mb-8">
-                  {s.features.map((f) => (
-                    <li key={f} className="flex items-center gap-3">
-                      <CheckCircle className="h-5 w-5 text-primary shrink-0" /> <span className="text-base">{f}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link to="/contact">
-                  <Button size="lg" className="bg-primary text-primary-foreground font-semibold shadow-md">Get a Quote</Button>
-                </Link>
-              </div>
+    <section className="py-20 bg-background">
+      <div className="w-full px-6 md:px-12 lg:px-24 max-w-7xl mx-auto space-y-20">
+        {services.map((s, i) => (
+          <div
+            key={s.title}
+            className={`flex flex-col lg:flex-row gap-12 items-center ${i % 2 === 1 ? "lg:flex-row-reverse" : ""
+              }`}
+          >
+            {/* Image */}
+            <div className="w-full lg:w-[420px] xl:w-[460px] shrink-0 rounded-2xl overflow-hidden shadow-sm">
+              <img
+                src={s.image}
+                alt={s.title}
+                className="w-full aspect-[4/3] object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
             </div>
-          );
-        })}
+
+            {/* Content */}
+            <div className="flex-1 min-w-0">
+              <p className="text-[10px] uppercase tracking-widest text-accent font-semibold mb-3">Service {String(i + 1).padStart(2, "0")}</p>
+              <h2 className="text-3xl font-bold mb-4 leading-tight">{s.title}</h2>
+              <p className="text-muted-foreground text-base leading-relaxed mb-7">{s.description}</p>
+              <ul className="space-y-3 mb-8">
+                {s.features.map((f) => (
+                  <li key={f} className="flex items-center gap-3">
+                    <CheckCircle className="h-4 w-4 text-accent shrink-0" />
+                    <span className="text-sm font-medium">{f}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link to="/contact">
+                <Button className="bg-primary text-primary-foreground font-semibold px-7 hover:bg-primary/90">
+                  Get a Quote
+                </Button>
+              </Link>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
 
