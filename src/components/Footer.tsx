@@ -75,15 +75,15 @@ const Footer = () => (
         <ul className="space-y-3 text-sm text-white/100">
           <li className="flex items-start gap-2">
             <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
-            Laxmi Narayan Industrial Estate, F156, F157, Surat - Navsari Rd, Baroda Rayon Corporation, COMPOUND, Udhana, Surat, Gujarat 394210
+            F156/F157/F157M, Laxmi Narayan Industrial Estate, Surat - Navsari Rd, Baroda Rayon Corporation Compound, Udhana, Surat, Gujarat 394210
           </li>
           <li className="flex items-center gap-2">
             <Phone className="h-4 w-4 shrink-0" />
-            <a href="tel:+912612547254" className="hover:bg-white/20 transition-all px-1 rounded">0261 2547 254</a>
+            <a href="tel:+919909707661" className="hover:bg-white/20 transition-all px-1 rounded">+91 9909707661</a>
           </li>
           <li className="flex items-center gap-2">
             <Phone className="h-4 w-4 shrink-0" />
-            <a href="tel:+919727451000" className="hover:bg-white/20 transition-all px-1 rounded">+91 97274 51000</a>
+            <a href="tel:+919723372877" className="hover:bg-white/20 transition-all px-1 rounded">+91 9723372877</a>
           </li>
           <li className="flex items-center gap-2">
             <Mail className="h-4 w-4 shrink-0" />

@@ -34,15 +34,15 @@ const Contact = () => {
               {
                 icon: <MapPin className="h-5 w-5" />,
                 label: "Office",
-                value: "F156–F157, Laxmi Narayan Industrial Estate, Udhana, Surat 394210",
+                value: "F156–F157-F157M, Laxmi Narayan Industrial Estate, Udhana, Surat 394210",
               },
               {
                 icon: <Phone className="h-5 w-5" />,
                 label: "Phone",
                 value: (
                   <span className="flex flex-col gap-0.5">
-                    <a href="tel:+912612547254" className="hover:text-accent transition-colors">0261 2547 254</a>
-                    <a href="tel:+919727451000" className="hover:text-accent transition-colors">+91 97274 51000</a>
+                    <a href="tel:+912612547254" className="hover:text-accent transition-colors">+91 9909707661</a>
+                    <a href="tel:+919727451000" className="hover:text-accent transition-colors">+91 9723372877</a>
                   </span>
                 ),
               },
@@ -227,11 +227,11 @@ const Contact = () => {
             <div>
               <p className="text-[10px] uppercase tracking-widest text-accent font-semibold mb-2">Location</p>
               <h2 className="text-2xl font-bold mb-1">Find Us</h2>
-              <p className="text-sm text-muted-foreground">Laxmi Narayan Industrial Estate, F156–F157, Udhana, Surat, Gujarat 394210</p>
+              <p className="text-sm text-muted-foreground">Laxmi Narayan Industrial Estate, F156–F157-F157M, Udhana, Surat, Gujarat 394210</p>
             </div>
             <div className="rounded-xl overflow-hidden flex-1 min-h-[420px] border border-border/50 shadow-sm">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.4!2d72.8!3d21.17!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDEwJzEyLjAiTiA3MsKwNDgnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://maps.google.com/maps?q=Laxmi+Narayan+Industrial+Estate+Udhana+Surat+394210+Gujarat+India&t=&z=17&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0, display: "block" }}
