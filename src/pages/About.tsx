@@ -19,7 +19,7 @@ const milestones = [
 
 const About = () => (
   <Layout>
-    <section className="relative overflow-hidden bg-[#7CB8EB] border-b border-white/10 py-20 pt-32">
+    <section className="relative overflow-hidden bg-[#2171b5] border-b border-white/10 py-20 pt-32">
       {/* Noise texture overlay */}
       <div className="absolute inset-0 noise-texture opacity-90"></div>
       <div className="w-full px-6 md:px-12 lg:px-24 text-center relative z-10">
@@ -54,7 +54,7 @@ const About = () => (
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Mission Card */}
-          <div className="group relative overflow-hidden bg-gradient-to-br from-[#7CB8EB] to-[#5a9fd4] p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+          <div className="group relative overflow-hidden bg-gradient-to-br from-[#2171b5] to-[#5a9fd4] p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
             {/* Noise texture overlay */}
             <div className="absolute inset-0 noise-texture opacity-60"></div>
 
@@ -73,7 +73,7 @@ const About = () => (
           </div>
 
           {/* Vision Card */}
-          <div className="group relative overflow-hidden bg-gradient-to-br from-[#7CB8EB] to-[#5a9fd4] p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+          <div className="group relative overflow-hidden bg-gradient-to-br from-[#2171b5] to-[#5a9fd4] p-10 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
             {/* Noise texture overlay */}
             <div className="absolute inset-0 noise-texture opacity-60"></div>
 
@@ -108,7 +108,7 @@ const About = () => (
             { title: "Integrity", desc: "Honest communication and transparent pricing are our hallmarks." },
             { title: "Innovation", desc: "Adopting the latest cooling technologies for better efficiency." }
           ].map((value, i) => (
-            <div key={i} className="relative overflow-hidden bg-background p-8 rounded-2xl border hover:shadow-lg transition-all duration-300 text-center group hover:-translate-y-1 hover:bg-[#7CB8EB]">
+            <div key={i} className="relative overflow-hidden bg-background p-8 rounded-2xl border hover:shadow-lg transition-all duration-300 text-center group hover:-translate-y-1 hover:bg-[#2171b5]">
               {/* Noise texture overlay on hover */}
               <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-90 transition-opacity duration-300 pointer-events-none"></div>
 
@@ -198,7 +198,7 @@ const About = () => (
     </section>
 
     {/* Awards & Recognition Section (New) */}
-    <section className="py-20 bg-[#7CB8EB]/10 border-y border-[#7CB8EB]/20">
+    <section className="py-20 bg-[#2171b5]/10 border-y border-[#2171b5]/20">
       <div className="w-full px-6 md:px-12 lg:px-24 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-12">Awards & Certifications</h2>
         <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">

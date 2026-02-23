@@ -28,7 +28,7 @@ const ProductDetail = () => {
     return (
         <Layout>
             {/* Hero Section */}
-            <section className="relative overflow-hidden bg-[#7CB8EB] border-b border-white/10 py-20 pt-32">
+            <section className="relative overflow-hidden bg-[#2171b5] border-b border-white/10 py-20 pt-32">
                 <div className="absolute inset-0 noise-texture opacity-90"></div>
                 <div className="w-full px-6 md:px-12 lg:px-24 relative z-10">
                     <Button

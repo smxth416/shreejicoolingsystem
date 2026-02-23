@@ -12,7 +12,7 @@ const csrItems = [
 
 const CSR = () => (
   <Layout>
-    <section className="relative overflow-hidden bg-[#7CB8EB] border-b border-white/10 py-20 pt-32">
+    <section className="relative overflow-hidden bg-[#2171b5] border-b border-white/10 py-20 pt-32">
       {/* Noise texture overlay */}
       <div className="absolute inset-0 noise-texture opacity-90"></div>
       <div className="w-full px-6 md:px-12 lg:px-24 text-center relative z-10">
@@ -25,7 +25,7 @@ const CSR = () => (
       <div className="w-full px-6 md:px-12 lg:px-24">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {csrItems.map((item) => (
-            <div key={item.title} className="relative overflow-hidden bg-card border rounded-lg p-6 hover:shadow-lg transition-all duration-300 group hover:-translate-y-1 hover:bg-[#7CB8EB]">
+            <div key={item.title} className="relative overflow-hidden bg-card border rounded-lg p-6 hover:shadow-lg transition-all duration-300 group hover:-translate-y-1 hover:bg-[#2171b5]">
               {/* Noise texture overlay on hover */}
               <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-90 transition-opacity duration-300 pointer-events-none"></div>
 

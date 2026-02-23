@@ -35,7 +35,7 @@ const Header = () => {
       <div className="container mx-auto">
         <div
           className={`backdrop-blur-lg border rounded-full shadow-lg px-6 py-3 transition-all duration-300 relative overflow-hidden ${scrolled
-            ? "bg-[#7CB8EB] border-[#7CB8EB]/50"
+            ? "bg-[#2171b5] border-[#2171b5]/50"
             : "bg-transparent border-white/20"
             }`}
         >
@@ -76,7 +76,7 @@ const Header = () => {
             <div className="hidden lg:block">
               <Link to="/contact">
                 <Button
-                  className="rounded-full px-6 shadow-md transition-all font-semibold bg-white text-[#7CB8EB] hover:bg-white/90"
+                  className="rounded-full px-6 shadow-md transition-all font-semibold bg-white text-[#2171b5] hover:bg-white/90"
                 >
                   Get a Quote
                 </Button>

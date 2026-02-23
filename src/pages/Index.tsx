@@ -65,7 +65,7 @@ const ProjectModal = ({ project, onClose }: { project: ProjectData; onClose: () 
         <button
           onClick={onClose}
           className="absolute -top-5 -right-5 z-30 w-10 h-10 rounded-full flex items-center justify-center overflow-hidden shadow-lg transition-transform hover:scale-110"
-          style={{ backgroundColor: '#7CB8EB' }}
+          style={{ backgroundColor: '#2171b5' }}
         >
           <div className="absolute inset-0 noise-texture opacity-60 pointer-events-none"></div>
           <X className="h-5 w-5 text-white relative z-10" />
@@ -108,10 +108,10 @@ const ProjectModal = ({ project, onClose }: { project: ProjectData; onClose: () 
           </div>
 
           <div className="p-6 md:p-8">
-            <span className="inline-block bg-[#7CB8EB] text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">{project.category}</span>
+            <span className="inline-block bg-[#2171b5] text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">{project.category}</span>
             <h2 className="text-2xl md:text-3xl font-bold mb-2">{project.title}</h2>
             <div className="flex items-center gap-1.5 text-muted-foreground mb-5">
-              <MapPin className="h-4 w-4 text-[#7CB8EB]" />
+              <MapPin className="h-4 w-4 text-[#2171b5]" />
               <span>{project.location}</span>
             </div>
             <p className="text-muted-foreground leading-relaxed text-base">{project.desc}</p>
@@ -169,7 +169,7 @@ const ProjectCard = ({ project }: { project: ProjectData }) => {
             </div>
           )}
 
-          <span className="absolute top-4 left-4 bg-[#7CB8EB] text-white text-xs font-semibold px-3 py-1 rounded-full shadow z-10">
+          <span className="absolute top-4 left-4 bg-[#2171b5] text-white text-xs font-semibold px-3 py-1 rounded-full shadow z-10">
             {project.category}
           </span>
         </div>
@@ -179,7 +179,7 @@ const ProjectCard = ({ project }: { project: ProjectData }) => {
             {project.title}
           </h3>
           <div className="flex items-center gap-1 text-sm text-muted-foreground mb-4">
-            <MapPin className="h-4 w-4 text-[#7CB8EB] shrink-0" />
+            <MapPin className="h-4 w-4 text-[#2171b5] shrink-0" />
             <span>{project.location}</span>
           </div>
           <Button variant="default" size="sm" className="rounded-full px-6" onClick={() => setShowModal(true)}>
@@ -207,10 +207,10 @@ const Index = () => {
 
   return (
     <Layout>
-      {/* Hero Section - Full width with #7CB8EB background and noise texture */}
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-32 pb-20" style={{ backgroundColor: '#7CB8EB' }}>
+      {/* Hero Section - Full width with #2171b5 background and noise texture */}
+      <section className="relative min-h-screen flex items-center overflow-hidden pt-32 pb-20" style={{ backgroundColor: '#2171b5' }}>
         {/* Noise texture overlay */}
-        <div className="absolute inset-0 noise-texture"></div>
+        <div className="absolute inset-0 noise-texture opacity-60"></div>
 
         <div className="w-full px-6 md:px-12 lg:px-24 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -231,13 +231,13 @@ const Index = () => {
 
               <div className="flex flex-wrap gap-4 relative z-10">
                 <Link to="/contact">
-                  <Button size="lg" className="bg-white text-[#7CB8EB] hover:bg-white/90 text-base font-semibold shadow-lg hover:shadow-xl transition-all group px-8 py-6 rounded-full">
+                  <Button size="lg" className="bg-white text-[#2171b5] hover:bg-white/90 text-base font-semibold shadow-lg hover:shadow-xl transition-all group px-8 py-6 rounded-full">
                     OUR PROJECTS
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
                 <Link to="/services">
-                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#7CB8EB] text-base transition-all px-8 py-6 rounded-full bg-transparent">
+                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#2171b5] text-base transition-all px-8 py-6 rounded-full bg-transparent">
                     OUR SERVICES
                   </Button>
                 </Link>
@@ -266,7 +266,7 @@ const Index = () => {
                 ))}
 
                 {/* Decorative gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#7CB8EB]/20 via-transparent to-white/10 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#2171b5]/20 via-transparent to-white/10 pointer-events-none"></div>
               </div>
 
               {/* Decorative elements */}
@@ -309,7 +309,7 @@ const Index = () => {
             {serviceHighlights.map((s, idx) => (
               <div
                 key={s.title}
-                className="group relative bg-card rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-300 border border-border/50 hover:border-accent/50 hover:-translate-y-2 overflow-hidden hover:bg-[#7CB8EB]"
+                className="group relative bg-card rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-300 border border-border/50 hover:border-accent/50 hover:-translate-y-2 overflow-hidden hover:bg-[#2171b5]"
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 {/* Noise texture overlay on hover */}
@@ -317,7 +317,7 @@ const Index = () => {
 
                 <div className="relative z-10">
                   <div className="mb-6 inline-flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <s.icon className="h-16 w-16 text-[#7CB8EB] group-hover:text-white transition-colors duration-300" strokeWidth={1.2} />
+                    <s.icon className="h-16 w-16 text-[#2171b5] group-hover:text-white transition-colors duration-300" strokeWidth={1.2} />
                   </div>
 
                   <h3 className="font-bold text-xl mb-3 text-foreground group-hover:text-white transition-colors duration-300">
@@ -379,9 +379,9 @@ const Index = () => {
                     className="group relative bg-card rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/30 hover:-translate-y-1 cursor-pointer"
                   >
                     {/* Product Icon */}
-                    <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-[#7CB8EB]/10 to-[#7CB8EB]/5 flex items-center justify-center group-hover:from-[#7CB8EB] group-hover:to-[#5a9fd4] transition-all duration-300">
+                    <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-[#2171b5]/10 to-[#2171b5]/5 flex items-center justify-center group-hover:from-[#2171b5] group-hover:to-[#5a9fd4] transition-all duration-300">
                       <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none"></div>
-                      <product.icon className="h-16 w-16 text-[#7CB8EB] group-hover:text-white transition-colors duration-300 relative z-10" strokeWidth={1.5} />
+                      <product.icon className="h-16 w-16 text-[#2171b5] group-hover:text-white transition-colors duration-300 relative z-10" strokeWidth={1.5} />
                     </div>
 
                     {/* Product Title */}
@@ -503,7 +503,7 @@ const Index = () => {
                   </div>
                 )}
 
-                <div className="relative overflow-hidden bg-background p-8 rounded-2xl border text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#7CB8EB]">
+                <div className="relative overflow-hidden bg-background p-8 rounded-2xl border text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#2171b5]">
                   {/* Noise texture overlay on hover */}
                   <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-90 transition-opacity duration-300 pointer-events-none"></div>
 
@@ -537,7 +537,7 @@ const Index = () => {
             {stats.map((stat, idx) => (
               <div
                 key={stat.label}
-                className="group relative bg-card rounded-2xl p-8 border border-border hover:border-primary/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden hover:bg-[#7CB8EB]"
+                className="group relative bg-card rounded-2xl p-8 border border-border hover:border-primary/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden hover:bg-[#2171b5]"
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 {/* Noise texture overlay on hover */}
@@ -572,7 +572,7 @@ const Index = () => {
             {industries.map((i, idx) => (
               <div
                 key={i.label}
-                className="group relative flex flex-col items-center gap-4 p-8 rounded-2xl border-2 border-border hover:border-accent bg-card transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden hover:bg-[#7CB8EB]"
+                className="group relative flex flex-col items-center gap-4 p-8 rounded-2xl border-2 border-border hover:border-accent bg-card transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden hover:bg-[#2171b5]"
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 {/* Noise texture overlay on hover */}

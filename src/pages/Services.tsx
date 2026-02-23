@@ -12,7 +12,7 @@ import {
 
 const Services = () => (
   <Layout>
-    <section className="relative overflow-hidden bg-[#7CB8EB] border-b border-white/10 py-20 pt-32">
+    <section className="relative overflow-hidden bg-[#2171b5] border-b border-white/10 py-20 pt-32">
       {/* Noise texture overlay */}
       <div className="absolute inset-0 noise-texture opacity-90"></div>
       <div className="w-full px-6 md:px-12 lg:px-24 text-center relative z-10">
@@ -111,7 +111,7 @@ const Services = () => (
             <AccordionItem
               key={i}
               value={`faq-${i}`}
-              className="relative overflow-hidden border border-[#7CB8EB] rounded-xl bg-white px-6 data-[state=open]:shadow-md transition-all duration-300 data-[state=closed]:hover:bg-[#7CB8EB]/70 data-[state=closed]:hover:border-[#5a9bc9] group"
+              className="relative overflow-hidden border border-[#2171b5] rounded-xl bg-white px-6 data-[state=open]:shadow-md transition-all duration-300 data-[state=closed]:hover:bg-[#2171b5]/70 data-[state=closed]:hover:border-[#5a9bc9] group"
             >
               {/* Noise texture overlay */}
               <div className="absolute inset-0 noise-texture opacity-0 group-hover:group-data-[state=closed]:opacity-60 transition-opacity duration-300 pointer-events-none"></div>
@@ -137,7 +137,7 @@ const Services = () => (
     </section>
 
     {/* Service Workflow (New) */}
-    <section className="py-20 bg-[#7CB8EB]/5">
+    <section className="py-20 bg-[#2171b5]/5">
       <div className="w-full px-6 md:px-12 lg:px-24">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">How We Serve You</h2>
@@ -151,7 +151,7 @@ const Services = () => (
             { icon: Settings, title: "3. Repair", desc: "Quick resolution using genuine parts and tools." },
             { icon: CheckCircle, title: "4. Feedback", desc: "We ensure your satisfaction before closing the ticket." }
           ].map((step, i) => (
-            <div key={i} className="relative overflow-hidden bg-background p-8 rounded-2xl border text-center hover:shadow-lg transition-all duration-300 group hover:-translate-y-1 hover:bg-[#7CB8EB]">
+            <div key={i} className="relative overflow-hidden bg-background p-8 rounded-2xl border text-center hover:shadow-lg transition-all duration-300 group hover:-translate-y-1 hover:bg-[#2171b5]">
               {/* Noise texture overlay on hover */}
               <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-90 transition-opacity duration-300 pointer-events-none"></div>
 

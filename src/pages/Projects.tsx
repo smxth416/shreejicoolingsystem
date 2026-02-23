@@ -140,7 +140,7 @@ const ProjectModal = ({ project, onClose }: { project: ProjectData; onClose: () 
                 <button
                     onClick={onClose}
                     className="absolute -top-5 -right-5 z-30 w-10 h-10 rounded-full flex items-center justify-center overflow-hidden shadow-lg transition-transform hover:scale-110"
-                    style={{ backgroundColor: '#7CB8EB' }}
+                    style={{ backgroundColor: '#2171b5' }}
                 >
                     <div className="absolute inset-0 noise-texture opacity-60 pointer-events-none"></div>
                     <X className="h-5 w-5 text-white relative z-10" />
@@ -197,12 +197,12 @@ const ProjectModal = ({ project, onClose }: { project: ProjectData; onClose: () 
 
                     {/* Content */}
                     <div className="p-6 md:p-8">
-                        <span className="inline-block bg-[#7CB8EB] text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                        <span className="inline-block bg-[#2171b5] text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">
                             {project.category}
                         </span>
                         <h2 className="text-2xl md:text-3xl font-bold mb-2">{project.title}</h2>
                         <div className="flex items-center gap-1.5 text-muted-foreground mb-5">
-                            <MapPin className="h-4 w-4 text-[#7CB8EB]" />
+                            <MapPin className="h-4 w-4 text-[#2171b5]" />
                             <span>{project.location}</span>
                         </div>
                         <p className="text-muted-foreground leading-relaxed text-base">{project.desc}</p>
@@ -271,7 +271,7 @@ const ProjectCard = ({ project }: { project: ProjectData }) => {
                         </div>
                     )}
 
-                    <span className="absolute top-4 left-4 bg-[#7CB8EB] text-white text-xs font-semibold px-3 py-1 rounded-full shadow z-10">
+                    <span className="absolute top-4 left-4 bg-[#2171b5] text-white text-xs font-semibold px-3 py-1 rounded-full shadow z-10">
                         {project.category}
                     </span>
                 </div>
@@ -281,7 +281,7 @@ const ProjectCard = ({ project }: { project: ProjectData }) => {
                         {project.title}
                     </h3>
                     <div className="flex items-center gap-1 text-sm text-muted-foreground mb-4">
-                        <MapPin className="h-4 w-4 text-[#7CB8EB] shrink-0" />
+                        <MapPin className="h-4 w-4 text-[#2171b5] shrink-0" />
                         <span>{project.location}</span>
                     </div>
                     <Button
@@ -305,7 +305,7 @@ const Projects = () => {
 
     return (
         <Layout>
-            <section className="relative overflow-hidden bg-[#7CB8EB] border-b border-white/10 py-20 pt-32">
+            <section className="relative overflow-hidden bg-[#2171b5] border-b border-white/10 py-20 pt-32">
                 <div className="absolute inset-0 noise-texture opacity-90"></div>
                 <div className="w-full px-6 md:px-12 lg:px-24 text-center relative z-10">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Our Projects</h1>
@@ -321,7 +321,7 @@ const Projects = () => {
                         <Button
                             variant="outline"
                             onClick={() => navigate(-1)}
-                            className="flex items-center gap-2 border-[#7CB8EB] text-[#7CB8EB] hover:bg-[#7CB8EB] hover:text-white rounded-full px-6 transition-all"
+                            className="flex items-center gap-2 border-[#2171b5] text-[#2171b5] hover:bg-[#2171b5] hover:text-white rounded-full px-6 transition-all"
                         >
                             <ArrowLeft className="h-4 w-4" />
                             Back

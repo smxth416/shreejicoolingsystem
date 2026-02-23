@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook, Youtube } from "lucide-react";
 
 const Footer = () => (
-  <footer className="relative overflow-hidden" style={{ backgroundColor: '#7CB8EB' }}>
+  <footer className="relative overflow-hidden" style={{ backgroundColor: '#2171b5' }}>
     {/* Noise texture overlay */}
     <div className="absolute inset-0 noise-texture"></div>
 

@@ -11,7 +11,7 @@ export const jobs: Job[] = [
   {
     id: "1",
     title: "AC Technician For Chiller",
-    location: "Mumbai, India",
+    location: "Surat, Gujarat",
     type: "Full-time",
     description: "Experienced technician needed for chiller maintenance and repair.",
     details: [
@@ -25,7 +25,7 @@ export const jobs: Job[] = [
   {
     id: "2",
     title: "AC Technician For Split AC",
-    location: "Mumbai, India",
+    location: "Surat, Gujarat",
     type: "Full-time",
     description: " Skilled technician for split AC installation and servicing.",
     details: [
@@ -39,7 +39,7 @@ export const jobs: Job[] = [
   {
     id: "3",
     title: "Driver For LMV",
-    location: "Mumbai, India",
+    location: "Surat, Gujarat",
     type: "Full-time",
     description: "Reliable driver for light motor vehicles.",
     details: [
@@ -53,7 +53,7 @@ export const jobs: Job[] = [
   {
     id: "4",
     title: "Collection Boy",
-    location: "Mumbai, India",
+    location: "Surat, Gujarat",
     type: "Full-time",
     description: "Field executive for payment collection and document handling.",
     details: [
@@ -66,22 +66,22 @@ export const jobs: Job[] = [
   },
   {
     id: "5",
-    title: "Data Entry Operator",
-    location: "Mumbai, India",
+    title: "AutoCAD Operator (Chiller & AC)",
+    location: "Surat, India",
     type: "Full-time",
-    description: "Accurate and efficient data entry specialist.",
+    description: "Drafting specialist for HVAC system layouts including chillers and air conditioning units.",
     details: [
-      "Enter customer and project data into the system.",
-      "Verify data accuracy and correct errors.",
-      "Generate reports from the database.",
-      "Manage digital filing systems.",
-      "Proficiency in MS Office (Excel, Word) is essential."
+      "Prepare detailed HVAC layout drawings using AutoCAD.",
+      "Design chiller plant rooms and AC duct schematics.",
+      "Coordinate with site engineers for as-built drawings.",
+      "Knowledge of HVAC components and refrigeration cycles preferred.",
+      "Minimum 1–2 years experience with AutoCAD/MEP drafting."
     ]
   },
   {
     id: "6",
     title: "Sr. Technician for VRF, Packaged & Ducted AC ( Central AC )",
-    location: "Mumbai, India",
+    location: "Surat, Gujarat",
     type: "Full-time",
     description: "Senior technician for complex central air conditioning systems.",
     details: [
@@ -94,30 +94,30 @@ export const jobs: Job[] = [
   },
   {
     id: "7",
-    title: "Ductline Manufacturing Machine Operator",
-    location: "Mumbai, India",
+    title: "Store Management Executive",
+    location: "Surat, India",
     type: "Full-time",
-    description: "Operator for duct manufacturing machinery.",
+    description: "Responsible for managing inventory, materials, and store operations for HVAC projects.",
     details: [
-      "Operate duct fabrication machines safely.",
-      "Monitor machine performance and quality output.",
-      "Perform basic machine maintenance.",
-      "Follow production schedules.",
-      "Ensure material efficiency and minimal waste."
+      "Maintain stock records of HVAC materials and spare parts.",
+      "Coordinate material inward/outward for project sites.",
+      "Conduct regular stock audits and reconciliations.",
+      "Liaise with procurement team for replenishment.",
+      "Proficiency in inventory/store management software preferred."
     ]
   },
   {
     id: "8",
-    title: "Software Operator",
-    location: "Mumbai, India",
+    title: "Site Helper",
+    location: "Surat, India",
     type: "Full-time",
-    description: "Operator for specialized industry software.",
+    description: "Support role for HVAC installation and maintenance teams at project sites.",
     details: [
-      "Operate and monitor specific software applications.",
-      "Input parameters and generate outputs.",
-      "Troubleshoot software glitches or report them.",
-      "Maintain logs of software operations.",
-      "Basic computer literacy types and software understanding."
+      "Assist technicians during AC installation and servicing.",
+      "Carry and arrange tools, equipment, and materials on site.",
+      "Maintain cleanliness and safety at the work area.",
+      "Follow instructions from senior technicians and supervisors.",
+      "No prior experience required — on-the-job training provided."
     ]
   },
 ];

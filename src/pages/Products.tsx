@@ -21,7 +21,7 @@ const Products = () => {
 
   return (
     <Layout>
-      <section className="relative overflow-hidden bg-[#7CB8EB] border-b border-white/10 py-20 pt-32">
+      <section className="relative overflow-hidden bg-[#2171b5] border-b border-white/10 py-20 pt-32">
         {/* Noise texture overlay */}
         <div className="absolute inset-0 noise-texture opacity-90"></div>
         <div className="w-full px-6 md:px-12 lg:px-24 text-center relative z-10">
@@ -133,7 +133,7 @@ const Products = () => {
       </section>
 
       {/* Technical Specs / Application Areas (New) */}
-      <section className="py-20 bg-[#7CB8EB]/5">
+      <section className="py-20 bg-[#2171b5]/5">
         <div className="w-full px-6 md:px-12 lg:px-24">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">

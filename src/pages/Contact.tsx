@@ -18,7 +18,7 @@ const Contact = () => {
   return (
     <Layout>
       {/* ── Hero ───────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#7CB8EB] border-b border-white/10 py-20 pt-32">
+      <section className="relative overflow-hidden bg-[#2171b5] border-b border-white/10 py-20 pt-32">
         <div className="absolute inset-0 noise-texture opacity-90" />
         <div className="w-full px-6 md:px-12 lg:px-24 text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Contact Us</h1>
@@ -229,7 +229,7 @@ const Contact = () => {
               <h2 className="text-2xl font-bold mb-1">Find Us</h2>
               <p className="text-sm text-muted-foreground">Laxmi Narayan Industrial Estate, F156–F157-F157M, Udhana, Surat, Gujarat 394210</p>
             </div>
-            <div className="rounded-xl overflow-hidden flex-1 min-h-[420px] border border-border/50 shadow-sm">
+            <div className="rounded-xl overflow-hidden border border-border/50 shadow-sm aspect-square w-full">
               <iframe
                 src="https://maps.google.com/maps?q=Laxmi+Narayan+Industrial+Estate+Udhana+Surat+394210+Gujarat+India&t=&z=17&ie=UTF8&iwloc=&output=embed"
                 width="100%"
