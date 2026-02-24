@@ -611,103 +611,97 @@ const Index = () => {
               {/* First set of testimonials */}
               {[
                 {
-                  name: "Rajesh Mehta",
-                  company: "TechCorp Industries",
-                  role: "Facilities Manager",
+                  name: "Mr. Arvind Vadoriya",
+                  company: "Signet Mall",
+                  role: "Kamrej",
                   rating: 5,
-                  text: "Shreeji Cooling transformed our 80,000 sq ft manufacturing facility with a state-of-the-art HVAC system. The installation was seamless, and our energy costs have dropped by 30%. Highly professional team!",
-                  image: "👨‍💼"
+                  title: "Excellent work",
+                  text: "We wanted to express our appreciation for the 300TR chiller work done by SCS – Shreeji Cooling System. All staff were knowledgeable and professionals, and the work done was of the highest caliber. Very neat and workmanlike. You have good technical staff.",
+                  image: "🏬"
                 },
                 {
-                  name: "Priya Sharma",
-                  company: "Sunrise Mall",
-                  role: "Operations Director",
+                  name: "Plantex Technologies",
+                  company: "Plantex Technologies",
+                  role: "Katargam",
                   rating: 5,
-                  text: "We needed a reliable cooling solution for our 5-story shopping complex. Shreeji delivered beyond expectations with their chiller system. The after-sales support is exceptional!",
-                  image: "👩‍💼"
+                  title: "Experts",
+                  text: "Outstanding customer service and very professional. From the first contact calling in until the work was done, SCS – Shreeji Cooling System's customer service is the best we have ever experienced.",
+                  image: "🏭"
                 },
                 {
-                  name: "Amit Patel",
-                  company: "Gujarat Textiles Ltd.",
-                  role: "Plant Head",
+                  name: "Mr. Dinesh Bhugadiya",
+                  company: "Kiran Gems Pvt. Ltd.",
+                  role: "Director",
                   rating: 5,
-                  text: "Working with Shreeji Cooling for 5+ years now. Their AMC service is top-notch, and they respond to any issues within hours. The best HVAC partner we've had!",
-                  image: "👨‍🔧"
+                  title: "True Professionals",
+                  text: "We have been using Bluestar. Great service and quick response given by SCS for any problems related to our Central air conditioning work. SCS has worked on our system for several years and is very knowledgeable and conscientious. Technical person respond quickly whenever we call for help/service. I would highly recommend SCS to anyone need a great heat and air provider.",
+                  image: "💎"
                 },
                 {
-                  name: "Sneha Desai",
-                  company: "Horizon IT Park",
-                  role: "Project Manager",
+                  name: "KRIBHCO",
+                  company: "Krishak Bharati Co-operative Ltd.",
+                  role: "Management",
                   rating: 5,
-                  text: "Shreeji installed ducted AC systems across our 12-floor IT park. The precision, quality of work, and adherence to timelines was impressive. Our tenants are extremely satisfied!",
-                  image: "👩‍💻"
+                  title: "Very Knowledgeable",
+                  text: "Excellent work done for by SCS. You set a high standard for your service and other central air conditioner related work. Thank you again, and expect many referrals from us in the future.",
+                  image: "🌾"
                 },
                 {
-                  name: "Vikram Singh",
-                  company: "Royal Hotels Group",
-                  role: "General Manager",
+                  name: "Mr. Manhar Shah",
+                  company: "Dhartidhan Ceramics",
+                  role: "Director",
                   rating: 5,
-                  text: "We have 3 properties serviced by Shreeji Cooling. Their VRV systems are energy-efficient and whisper-quiet - perfect for our luxury hotels. Excellent service quality!",
-                  image: "🏨"
+                  title: "Highly recommend",
+                  text: "Thank you so much for your professional installation of our new split air conditioning system. I would be willing to highly recommend your work to anyone seeking to cool or heat their homes/offices. Your services are of superior quality.",
+                  image: "🏗️"
                 },
-                {
-                  name: "Kavita Joshi",
-                  company: "MedCare Hospital",
-                  role: "Admin Head",
-                  rating: 5,
-                  text: "Healthcare facilities need precision cooling. Shreeji understood our critical requirements and delivered a flawless HVAC solution with backup systems. Truly reliable partners!",
-                  image: "⚕️"
-                },
-                {
-                  name: "Arjun Reddy",
-                  company: "Metro Pharma",
-                  role: "Operations Manager",
-                  rating: 5,
-                  text: "Our pharmaceutical warehouse requires strict temperature control. Shreeji's industrial chiller system maintains perfect conditions 24/7. Worth every rupee invested!",
-                  image: "💊"
-                },
-                {
-                  name: "Neha Kapoor",
-                  company: "Elite Fitness Chain",
-                  role: "CEO",
-                  rating: 5,
-                  text: "We have 8 gym locations, all equipped with Shreeji's HVAC systems. The air quality and temperature control keep our members comfortable during intense workouts. Great job!",
-                  image: "💪"
-                }
               ].concat([
                 // Duplicate for infinite scroll effect
                 {
-                  name: "Rajesh Mehta",
-                  company: "TechCorp Industries",
-                  role: "Facilities Manager",
+                  name: "Mr. Arvind Vadoriya",
+                  company: "Signet Mall",
+                  role: "Kamrej",
                   rating: 5,
-                  text: "Shreeji Cooling transformed our 80,000 sq ft manufacturing facility with a state-of-the-art HVAC system. The installation was seamless, and our energy costs have dropped by 30%. Highly professional team!",
-                  image: "👨‍💼"
+                  title: "Excellent work",
+                  text: "We wanted to express our appreciation for the 300TR chiller work done by SCS – Shreeji Cooling System. All staff were knowledgeable and professionals, and the work done was of the highest caliber. Very neat and workmanlike. You have good technical staff.",
+                  image: "🏬"
                 },
                 {
-                  name: "Priya Sharma",
-                  company: "Sunrise Mall",
-                  role: "Operations Director",
+                  name: "Plantex Technologies",
+                  company: "Plantex Technologies",
+                  role: "Katargam",
                   rating: 5,
-                  text: "We needed a reliable cooling solution for our 5-story shopping complex. Shreeji delivered beyond expectations with their chiller system. The after-sales support is exceptional!",
-                  image: "👩‍💼"
+                  title: "Experts",
+                  text: "Outstanding customer service and very professional. From the first contact calling in until the work was done, SCS – Shreeji Cooling System's customer service is the best we have ever experienced.",
+                  image: "🏭"
                 },
                 {
-                  name: "Amit Patel",
-                  company: "Gujarat Textiles Ltd.",
-                  role: "Plant Head",
+                  name: "Mr. Dinesh Bhugadiya",
+                  company: "Kiran Gems Pvt. Ltd.",
+                  role: "Director",
                   rating: 5,
-                  text: "Working with Shreeji Cooling for 5+ years now. Their AMC service is top-notch, and they respond to any issues within hours. The best HVAC partner we've had!",
-                  image: "👨‍🔧"
+                  title: "True Professionals",
+                  text: "We have been using Bluestar. Great service and quick response given by SCS for any problems related to our Central air conditioning work. SCS has worked on our system for several years and is very knowledgeable and conscientious. Technical person respond quickly whenever we call for help/service. I would highly recommend SCS to anyone need a great heat and air provider.",
+                  image: "💎"
                 },
                 {
-                  name: "Sneha Desai",
-                  company: "Horizon IT Park",
-                  role: "Project Manager",
+                  name: "KRIBHCO",
+                  company: "Krishak Bharati Co-operative Ltd.",
+                  role: "Management",
                   rating: 5,
-                  text: "Shreeji installed ducted AC systems across our 12-floor IT park. The precision, quality of work, and adherence to timelines was impressive. Our tenants are extremely satisfied!",
-                  image: "👩‍💻"
-                }
+                  title: "Very Knowledgeable",
+                  text: "Excellent work done for by SCS. You set a high standard for your service and other central air conditioner related work. Thank you again, and expect many referrals from us in the future.",
+                  image: "🌾"
+                },
+                {
+                  name: "Mr. Manhar Shah",
+                  company: "Dhartidhan Ceramics",
+                  role: "Director",
+                  rating: 5,
+                  title: "Highly recommend",
+                  text: "Thank you so much for your professional installation of our new split air conditioning system. I would be willing to highly recommend your work to anyone seeking to cool or heat their homes/offices. Your services are of superior quality.",
+                  image: "🏗️"
+                },
               ]).map((testimonial, idx) => (
                 <div
                   key={idx}
@@ -721,6 +715,11 @@ const Index = () => {
                       </svg>
                     ))}
                   </div>
+
+                  {/* Review title */}
+                  {'title' in testimonial && testimonial.title && (
+                    <h4 className="font-bold text-foreground mb-2">"{testimonial.title}"</h4>
+                  )}
 
                   {/* Testimonial text */}
                   <p className="text-muted-foreground leading-relaxed mb-6 italic">

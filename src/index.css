@@ -129,13 +129,13 @@
 }
 
 /* Auto-scroll animation for testimonials */
-@keyframes scroll {
+@keyframes ticker {
   0% {
     transform: translateX(0);
   }
 
   100% {
-    transform: translateX(calc(-400px * 8 - 6rem * 8));
+    transform: translateX(calc(-400px * 5 - 1.5rem * 5));
   }
 }
 
@@ -150,7 +150,7 @@
 }
 
 .animate-scroll {
-  animation: scroll 60s linear infinite;
+  animation: ticker 25s linear infinite;
 }
 
 .animate-marquee {
