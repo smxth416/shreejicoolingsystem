@@ -21,7 +21,7 @@ const About = () => (
   <Layout>
     <section className="relative overflow-hidden bg-[#2171b5] border-b border-white/10 py-20 pt-32">
       {/* Noise texture overlay */}
-      <div className="absolute inset-0 noise-texture opacity-90"></div>
+      <div className="absolute inset-0 noise-texture opacity-60"></div>
       <div className="w-full px-6 md:px-12 lg:px-24 text-center relative z-10">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">About Shreeji Cooling</h1>
         <p className="text-lg text-white/90 max-w-2xl mx-auto">Delivering reliable, energy-efficient HVAC solutions for commercial and industrial spaces since 2010.</p>
@@ -110,7 +110,7 @@ const About = () => (
           ].map((value, i) => (
             <div key={i} className="relative overflow-hidden bg-background p-8 rounded-2xl border hover:shadow-lg transition-all duration-300 text-center group hover:-translate-y-1 hover:bg-[#2171b5]">
               {/* Noise texture overlay on hover */}
-              <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-90 transition-opacity duration-300 pointer-events-none"></div>
+              <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none"></div>
 
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors duration-300">

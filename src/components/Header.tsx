@@ -40,7 +40,7 @@ const Header = () => {
             }`}
         >
           {/* Noise texture overlay - only visible when scrolled */}
-          {scrolled && <div className="absolute inset-0 noise-texture rounded-full"></div>}
+          {scrolled && <div className="absolute inset-0 noise-texture opacity-60 rounded-full"></div>}
 
           <div className="flex items-center justify-between relative z-10">
             <Link to="/" className="flex items-center gap-2">

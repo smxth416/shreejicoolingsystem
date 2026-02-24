@@ -313,7 +313,7 @@ const Index = () => {
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 {/* Noise texture overlay on hover */}
-                <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-90 transition-opacity duration-300 pointer-events-none"></div>
+                <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none"></div>
 
                 <div className="relative z-10">
                   <div className="mb-6 inline-flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -505,7 +505,7 @@ const Index = () => {
 
                 <div className="relative overflow-hidden bg-background p-5 sm:p-8 rounded-2xl border text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#2171b5]">
                   {/* Noise texture overlay on hover */}
-                  <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-90 transition-opacity duration-300 pointer-events-none"></div>
+                  <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none"></div>
 
                   <div className="relative z-10">
                     <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors duration-300">
@@ -541,7 +541,7 @@ const Index = () => {
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 {/* Noise texture overlay on hover */}
-                <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-90 transition-opacity duration-300 pointer-events-none"></div>
+                <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none"></div>
 
                 <div className="relative z-10 flex flex-col items-center text-center">
                   <div className="mb-3 p-3 sm:p-4 bg-primary/5 rounded-xl group-hover:bg-white/20 transition-colors duration-300">
@@ -576,7 +576,7 @@ const Index = () => {
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 {/* Noise texture overlay on hover */}
-                <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-90 transition-opacity duration-300 pointer-events-none"></div>
+                <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none"></div>
 
                 <div className="relative z-10 flex flex-col items-center">
                   <div className="p-4 bg-accent/10 rounded-xl group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300">

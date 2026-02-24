@@ -306,7 +306,7 @@ const Projects = () => {
     return (
         <Layout>
             <section className="relative overflow-hidden bg-[#2171b5] border-b border-white/10 py-20 pt-32">
-                <div className="absolute inset-0 noise-texture opacity-90"></div>
+                <div className="absolute inset-0 noise-texture opacity-60"></div>
                 <div className="w-full px-6 md:px-12 lg:px-24 text-center relative z-10">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Our Projects</h1>
                     <p className="text-lg text-white/90 max-w-2xl mx-auto">

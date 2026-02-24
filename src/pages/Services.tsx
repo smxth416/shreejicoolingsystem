@@ -14,7 +14,7 @@ const Services = () => (
   <Layout>
     <section className="relative overflow-hidden bg-[#2171b5] border-b border-white/10 py-20 pt-32">
       {/* Noise texture overlay */}
-      <div className="absolute inset-0 noise-texture opacity-90"></div>
+      <div className="absolute inset-0 noise-texture opacity-60"></div>
       <div className="w-full px-6 md:px-12 lg:px-24 text-center relative z-10">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Our Services</h1>
         <p className="text-lg text-white/90 max-w-2xl mx-auto">Comprehensive HVAC services from installation to maintenance for commercial and industrial projects.</p>
@@ -153,7 +153,7 @@ const Services = () => (
           ].map((step, i) => (
             <div key={i} className="relative overflow-hidden bg-background p-8 rounded-2xl border text-center hover:shadow-lg transition-all duration-300 group hover:-translate-y-1 hover:bg-[#2171b5]">
               {/* Noise texture overlay on hover */}
-              <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-90 transition-opacity duration-300 pointer-events-none"></div>
+              <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none"></div>
 
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 text-accent group-hover:bg-white/20 group-hover:text-white transition-colors duration-300">

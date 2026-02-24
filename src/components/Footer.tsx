@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook, Youtube } from "luc
 const Footer = () => (
   <footer className="relative overflow-hidden" style={{ backgroundColor: '#2171b5' }}>
     {/* Noise texture overlay */}
-    <div className="absolute inset-0 noise-texture"></div>
+    <div className="absolute inset-0 noise-texture opacity-60"></div>
 
     <div className="w-full px-6 md:px-12 lg:px-24 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
       <div className="col-span-2 md:col-span-1">
