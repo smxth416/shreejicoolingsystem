@@ -208,36 +208,36 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section - Full width with #2171b5 background and noise texture */}
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-32 pb-20" style={{ backgroundColor: '#2171b5' }}>
+      <section className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-12 md:pt-32 md:pb-20" style={{ backgroundColor: '#2171b5' }}>
         {/* Noise texture overlay */}
         <div className="absolute inset-0 noise-texture opacity-60"></div>
 
-        <div className="w-full px-6 md:px-12 lg:px-24 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="w-full px-4 sm:px-6 md:px-12 lg:px-24 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Side - Content */}
-            <div className="text-left">
-              <div className="inline-block mb-6 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                <span className="text-sm font-semibold tracking-wide text-white">Shreeji Cooling System Private Limited | Blue Star Authorised HVAC Dealers</span>
+            <div className="text-center lg:text-left">
+              <div className="inline-block mb-4 md:mb-6 px-4 py-2 sm:px-5 sm:py-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+                <span className="text-xs sm:text-sm font-semibold tracking-wide text-white">SCS – Shreeji Cooling System | Blue Star Authorised HVAC Dealers</span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight text-white">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight tracking-tight text-white">
                 Industrial & Commercial<br />
                 Air Conditioning Systems
               </h1>
 
-              <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-10 leading-relaxed">
-                Shreeji Cooling System Private Limited Blue Star Authorised HVAC Dealers trained in providing the highest level of customer service and with an extensive knowledge of our Air Conditioning units.
+              <p className="text-base md:text-lg lg:text-xl text-white/90 max-w-2xl mb-7 md:mb-10 leading-relaxed mx-auto lg:mx-0">
+                Blue Star Authorised HVAC Dealers trained in providing the highest level of customer service with extensive knowledge of Air Conditioning units.
               </p>
 
-              <div className="flex flex-wrap gap-4 relative z-10">
-                <Link to="/contact">
-                  <Button size="lg" className="bg-white text-[#2171b5] hover:bg-white/90 text-base font-semibold shadow-lg hover:shadow-xl transition-all group px-8 py-6 rounded-full">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 relative z-10 items-center lg:items-start">
+                <Link to="/contact" className="w-full sm:w-auto">
+                  <Button size="lg" className="w-full sm:w-auto bg-white text-[#2171b5] hover:bg-white/90 text-base font-semibold shadow-lg hover:shadow-xl transition-all group px-8 py-6 rounded-full">
                     OUR PROJECTS
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
-                <Link to="/services">
-                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#2171b5] text-base transition-all px-8 py-6 rounded-full bg-transparent">
+                <Link to="/services" className="w-full sm:w-auto">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-[#2171b5] text-base transition-all px-8 py-6 rounded-full bg-transparent">
                     OUR SERVICES
                   </Button>
                 </Link>
@@ -245,7 +245,7 @@ const Index = () => {
             </div>
 
             {/* Right Side - Auto-sliding Image Carousel */}
-            <div className="relative">
+            <div className="relative w-full max-h-[280px] sm:max-h-none lg:block">
               <div className="relative rounded-[3rem] overflow-hidden shadow-2xl aspect-[4/3]">
                 {/* Image slider */}
                 {sliderImages.map((image, index) => (
@@ -294,7 +294,7 @@ const Index = () => {
 
 
       {/* Service Highlights - Modern card design with glassmorphism */}
-      <section className="py-20 bg-background">
+      <section className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
@@ -309,7 +309,7 @@ const Index = () => {
             {serviceHighlights.map((s, idx) => (
               <div
                 key={s.title}
-                className="group relative bg-card rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-300 border border-border/50 hover:border-accent/50 hover:-translate-y-2 overflow-hidden hover:bg-[#2171b5]"
+                className="group relative bg-card rounded-2xl p-5 sm:p-8 shadow-md hover:shadow-2xl transition-all duration-300 border border-border/50 hover:border-accent/50 hover:-translate-y-2 overflow-hidden hover:bg-[#2171b5]"
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 {/* Noise texture overlay on hover */}
@@ -317,7 +317,7 @@ const Index = () => {
 
                 <div className="relative z-10">
                   <div className="mb-6 inline-flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <s.icon className="h-16 w-16 text-[#2171b5] group-hover:text-white transition-colors duration-300" strokeWidth={1.2} />
+                    <s.icon className="h-10 w-10 sm:h-16 sm:w-16 text-[#2171b5] group-hover:text-white transition-colors duration-300" strokeWidth={1.2} />
                   </div>
 
                   <h3 className="font-bold text-xl mb-3 text-foreground group-hover:text-white transition-colors duration-300">
@@ -335,12 +335,12 @@ const Index = () => {
       </section>
 
       {/* About Us Section with Products */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 md:py-20 bg-muted/30">
         <div className="w-full px-6 md:px-12 lg:px-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Product Grid (3x2) */}
             <div className="relative">
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4">
                 {[
                   {
                     icon: Wind,
@@ -381,7 +381,7 @@ const Index = () => {
                     {/* Product Icon */}
                     <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-[#2171b5]/10 to-[#2171b5]/5 flex items-center justify-center group-hover:from-[#2171b5] group-hover:to-[#5a9fd4] transition-all duration-300">
                       <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none"></div>
-                      <product.icon className="h-16 w-16 text-[#2171b5] group-hover:text-white transition-colors duration-300 relative z-10" strokeWidth={1.5} />
+                      <product.icon className="h-8 w-8 sm:h-12 sm:w-12 text-[#2171b5] group-hover:text-white transition-colors duration-300 relative z-10" strokeWidth={1.5} />
                     </div>
 
                     {/* Product Title */}
@@ -397,8 +397,8 @@ const Index = () => {
 
             {/* Right Side - Company Information */}
             <div className="text-left">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground leading-tight">
-                India's Leading Trusted <br /><span className="text-primary">HVAC Solutions Provider</span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-foreground leading-tight">
+                India's Leading Trusted <span className="text-primary">HVAC Solutions Provider</span>
               </h2>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
                 Since our inception, Shreeji Cooling System Pvt. Ltd. has been at the forefront of delivering cutting-edge climate control solutions. As authorised Blue Star dealers, we combine world-class technology with local expertise to create comfortable, energy-efficient environments for businesses across sectors.
@@ -429,7 +429,7 @@ const Index = () => {
       </section>
 
       {/* Our Projects Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 md:py-20 bg-muted/30">
         <div className="w-full px-6 md:px-12 lg:px-24">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Projects</h2>
@@ -479,14 +479,14 @@ const Index = () => {
       </section>
 
       {/* Our Process Section */}
-      <section className="py-20 bg-background">
+      <section className="py-12 md:py-20 bg-background">
         <div className="w-full px-6 md:px-12 lg:px-24">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Streamlined Process</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">From consultation to commissioning, we ensure a seamless experience.</p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-12 relative">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-12 relative">
             {/* Connecting Line removed in favor of arrows */}
 
             {[
@@ -503,7 +503,7 @@ const Index = () => {
                   </div>
                 )}
 
-                <div className="relative overflow-hidden bg-background p-8 rounded-2xl border text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#2171b5]">
+                <div className="relative overflow-hidden bg-background p-5 sm:p-8 rounded-2xl border text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#2171b5]">
                   {/* Noise texture overlay on hover */}
                   <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-90 transition-opacity duration-300 pointer-events-none"></div>
 
@@ -522,10 +522,10 @@ const Index = () => {
       </section>
 
       {/* Stats Section - Enhanced with icons and better visual hierarchy */}
-      <section className="py-20 bg-background">
+      <section className="py-12 md:py-20 bg-background">
         <div className="w-full px-6 md:px-12 lg:px-24">
           <div className="text-center mb-14">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground">
               Why Choose Shreeji Cooling?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -537,18 +537,18 @@ const Index = () => {
             {stats.map((stat, idx) => (
               <div
                 key={stat.label}
-                className="group relative bg-card rounded-2xl p-8 border border-border hover:border-primary/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden hover:bg-[#2171b5]"
+                className="group relative bg-card rounded-2xl p-4 sm:p-6 md:p-8 border border-border hover:border-primary/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden hover:bg-[#2171b5]"
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 {/* Noise texture overlay on hover */}
                 <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-90 transition-opacity duration-300 pointer-events-none"></div>
 
                 <div className="relative z-10 flex flex-col items-center text-center">
-                  <div className="mb-4 p-4 bg-primary/5 rounded-xl group-hover:bg-white/20 transition-colors duration-300">
-                    <stat.icon className="h-10 w-10 text-primary group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
+                  <div className="mb-3 p-3 sm:p-4 bg-primary/5 rounded-xl group-hover:bg-white/20 transition-colors duration-300">
+                    <stat.icon className="h-7 w-7 sm:h-10 sm:w-10 text-primary group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
                   </div>
-                  <div className="text-4xl md:text-5xl font-bold mb-2 text-primary group-hover:text-white transition-colors duration-300">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground font-medium group-hover:text-white/80 transition-colors duration-300">{stat.label}</div>
+                  <div className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2 text-primary group-hover:text-white transition-colors duration-300">{stat.value}</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground font-medium group-hover:text-white/80 transition-colors duration-300">{stat.label}</div>
                 </div>
               </div>
             ))}
@@ -557,10 +557,10 @@ const Index = () => {
       </section>
 
       {/* Industries Section - Improved card design */}
-      <section className="py-20 bg-background">
+      <section className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-6 text-center">
           <div className="mb-14">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground">
               Industries We Serve
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -572,7 +572,7 @@ const Index = () => {
             {industries.map((i, idx) => (
               <div
                 key={i.label}
-                className="group relative flex flex-col items-center gap-4 p-8 rounded-2xl border-2 border-border hover:border-accent bg-card transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden hover:bg-[#2171b5]"
+                className="group relative flex flex-col items-center gap-2 sm:gap-4 p-5 sm:p-8 rounded-2xl border-2 border-border hover:border-accent bg-card transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden hover:bg-[#2171b5]"
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 {/* Noise texture overlay on hover */}
@@ -580,9 +580,9 @@ const Index = () => {
 
                 <div className="relative z-10 flex flex-col items-center">
                   <div className="p-4 bg-accent/10 rounded-xl group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300">
-                    <i.icon className="h-12 w-12 text-accent group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
+                    <i.icon className="h-8 w-8 sm:h-12 sm:w-12 text-accent group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
                   </div>
-                  <span className="font-semibold text-base text-foreground mt-4 group-hover:text-white transition-colors duration-300">
+                  <span className="font-semibold text-sm sm:text-base text-foreground mt-2 sm:mt-4 group-hover:text-white transition-colors duration-300">
                     {i.label}
                   </span>
                 </div>
@@ -593,10 +593,10 @@ const Index = () => {
       </section>
 
       {/* Testimonial Section - Auto-scrolling carousel */}
-      <section className="py-20 bg-background overflow-hidden border-y border-border">
+      <section className="py-12 md:py-20 bg-background overflow-hidden border-y border-border">
         <div className="container mx-auto px-6">
           <div className="text-center mb-14">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground">
               What Our Clients Say
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -705,7 +705,7 @@ const Index = () => {
               ]).map((testimonial, idx) => (
                 <div
                   key={idx}
-                  className="flex-shrink-0 w-[400px] bg-card rounded-2xl p-8 shadow-lg border border-border/50 hover:shadow-xl transition-shadow"
+                  className="flex-shrink-0 w-[85vw] sm:w-[380px] md:w-[400px] bg-card rounded-2xl p-5 sm:p-8 shadow-lg border border-border/50 hover:shadow-xl transition-shadow"
                 >
                   {/* Rating stars */}
                   <div className="flex gap-1 mb-4">
@@ -743,8 +743,8 @@ const Index = () => {
           </div>
 
           {/* Trust indicators */}
-          <div className="mt-16 text-center">
-            <div className="inline-flex items-center gap-8 px-8 py-4 bg-card rounded-full border border-border/50 shadow-md">
+          <div className="mt-10 md:mt-16 text-center">
+            <div className="inline-flex flex-wrap justify-center items-center gap-4 sm:gap-8 px-5 sm:px-8 py-4 bg-card rounded-2xl sm:rounded-full border border-border/50 shadow-md">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">500+</div>
                 <div className="text-sm text-muted-foreground">Happy Clients</div>
@@ -765,23 +765,23 @@ const Index = () => {
       </section>
 
       {/* CTA Section - Modern design with gradient */}
-      <section className="py-20 relative overflow-hidden bg-background border-y border-border">
+      <section className="py-12 md:py-20 relative overflow-hidden bg-background border-y border-border">
         {/* Subtle background decoration */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(14,165,233,0.03),transparent_60%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(37,99,235,0.02),transparent_60%)]"></div>
 
         <div className="container relative mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-5 text-foreground">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-5 text-foreground">
             Need a Cooling Solution?
           </h2>
           <p className="text-lg md:text-xl mb-8 text-muted-foreground max-w-2xl mx-auto">
             Contact us today for a free consultation and quote. Our experts are ready to help.
           </p>
 
-          <Link to="/contact">
+          <Link to="/contact" className="w-full sm:w-auto block sm:inline-block">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-base px-8 py-6 shadow-lg hover:shadow-xl transition-all group"
+              className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-base px-8 py-6 shadow-lg hover:shadow-xl transition-all group"
             >
               Contact Us Today
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

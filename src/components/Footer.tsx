@@ -6,8 +6,8 @@ const Footer = () => (
     {/* Noise texture overlay */}
     <div className="absolute inset-0 noise-texture"></div>
 
-    <div className="w-full px-6 md:px-12 lg:px-24 py-12 grid md:grid-cols-4 gap-8 relative z-10">
-      <div>
+    <div className="w-full px-6 md:px-12 lg:px-24 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
+      <div className="col-span-2 md:col-span-1">
         <h1 className="text-2xl text-white/100">
           Shreeji Cooling System Private Limited
         </h1>
@@ -70,7 +70,7 @@ const Footer = () => (
         </ul>
       </div>
 
-      <div>
+      <div className="col-span-2 md:col-span-1">
         <h3 className="font-semibold mb-3 text-white underline">Contact</h3>
         <ul className="space-y-3 text-sm text-white/100">
           <li className="flex items-start gap-2">

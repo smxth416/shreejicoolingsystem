@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import FloatingInquiry from "./FloatingInquiry";
+import ScrollToTop from "./ScrollToTop";
 
 const Layout = ({ children }: { children: React.ReactNode }) => (
   <div className="min-h-screen flex flex-col relative">
@@ -14,6 +15,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
     </main>
     <Footer />
     <FloatingInquiry />
+    <ScrollToTop />
   </div>
 );
 
