@@ -20,13 +20,24 @@ const BlogPost = () => {
 
   return (
     <Layout>
-      <article className="py-16">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <Link to="/blog" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-accent mb-6">
+      <section className="relative overflow-hidden bg-[#2171b5] border-b border-white/10 py-16 pt-32">
+        {/* Noise texture overlay */}
+        <div className="absolute inset-0 noise-texture opacity-60"></div>
+        <div className="container mx-auto px-4 max-w-3xl relative z-10 text-center">
+          <Link to="/blog" className="inline-flex items-center gap-1 text-sm text-white/80 hover:text-white mb-6">
             <ArrowLeft className="h-4 w-4" /> Back to Blog
           </Link>
-          <time className="text-sm text-muted-foreground">{new Date(post.date).toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })}</time>
-          <h1 className="text-3xl md:text-4xl font-bold mt-2 mb-8">{post.title}</h1>
+          <div className="text-white/70 text-sm mb-2">
+            {new Date(post.date).toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })}
+          </div>
+          <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+            {post.title}
+          </h1>
+        </div>
+      </section>
+
+      <article className="py-16 bg-background">
+        <div className="container mx-auto px-4 max-w-3xl">
           <div className="prose prose-lg max-w-none text-muted-foreground whitespace-pre-line leading-relaxed">
             {post.content}
           </div>

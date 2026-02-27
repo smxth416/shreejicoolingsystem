@@ -34,13 +34,10 @@ const Header = () => {
     <header className="sticky top-4 z-50 px-4">
       <div className="container mx-auto">
         <div
-          className={`backdrop-blur-lg border rounded-full shadow-lg px-6 py-3 transition-all duration-300 relative overflow-hidden ${scrolled
-            ? "bg-[#2171b5] border-[#2171b5]/50"
-            : "bg-transparent border-white/20"
-            }`}
+          className="backdrop-blur-lg border border-[#2171b5]/50 rounded-full shadow-lg px-6 py-3 transition-all duration-300 relative overflow-hidden bg-[#2171b5]"
         >
-          {/* Noise texture overlay - only visible when scrolled */}
-          {scrolled && <div className="absolute inset-0 noise-texture opacity-60 rounded-full"></div>}
+          {/* Noise texture overlay */}
+          <div className="absolute inset-0 noise-texture opacity-60 rounded-full"></div>
 
           <div className="flex items-center justify-between relative z-10">
             <Link to="/" className="flex items-center gap-2">
@@ -60,12 +57,8 @@ const Header = () => {
                   key={l.to}
                   to={l.to}
                   className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${location.pathname === l.to
-                    ? scrolled
-                      ? "text-white bg-primary shadow-md"
-                      : "text-white bg-white/20 shadow-md"
-                    : scrolled
-                      ? "text-white/95 hover:bg-white/20 hover:text-white"
-                      : "text-white hover:bg-white/10"
+                    ? "text-white bg-primary shadow-md"
+                    : "text-white/95 hover:bg-white/20 hover:text-white"
                     }`}
                 >
                   {l.label}
@@ -85,15 +78,14 @@ const Header = () => {
 
             {/* Mobile toggle */}
             <button
-              className={`lg:hidden p-2 rounded-full transition-colors ${scrolled ? "hover:bg-muted" : "hover:bg-white/10"
-                }`}
+              className="lg:hidden p-2 rounded-full transition-colors hover:bg-white/20"
               onClick={() => setOpen(!open)}
               aria-label="Toggle menu"
             >
               {open ? (
-                <X className={`h-6 w-6 ${scrolled ? "" : "text-white"}`} />
+                <X className="h-6 w-6 text-white" />
               ) : (
-                <Menu className={`h-6 w-6 ${scrolled ? "" : "text-white"}`} />
+                <Menu className="h-6 w-6 text-white" />
               )}
             </button>
           </div>
