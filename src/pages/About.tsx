@@ -1,5 +1,7 @@
 import Layout from "@/components/Layout";
 import { Target, Eye, Heart, Shield, Users, Award } from "lucide-react";
+import { allProjects } from "@/data/projects";
+
 
 const values = [
   { icon: Shield, title: "Quality", desc: "We use only top-grade equipment and follow industry best practices." },
@@ -134,35 +136,17 @@ const About = () => (
 
       <div className="w-full overflow-hidden">
         <div className="flex w-max animate-marquee gap-8">
-          {[
-            "Reliance Industries",
-            "Tata Motors",
-            "L&T Construction",
-            "Adani Group",
-            "Godrej Properties",
-            "Marriott Hotels",
-            "DLF Cyber City",
-            "Apollo Hospitals",
-            "HDFC Bank",
-            "Infosys",
-            "Reliance Industries",
-            "Tata Motors",
-            "L&T Construction",
-            "Adani Group",
-            "Godrej Properties",
-            "Marriott Hotels",
-            "DLF Cyber City",
-            "Apollo Hospitals",
-            "HDFC Bank",
-            "Infosys"
-          ].map((client, i) => (
+          {allProjects.concat(allProjects).map((project, i) => (
             <div
               key={i}
-              className="group relative flex h-40 w-56 cursor-pointer items-center justify-center rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:border-primary/50 hover:bg-accent/5 hover:shadow-lg"
+              className="group relative flex flex-col h-40 w-64 cursor-pointer items-center justify-center rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:border-primary/50 hover:bg-accent/5 hover:shadow-lg"
             >
               <h3 className="text-xl font-bold text-muted-foreground group-hover:text-primary transition-colors text-center">
-                {client}
+                {project.title}
               </h3>
+              <p className="text-sm text-muted-foreground/70 group-hover:text-primary/70 transition-colors text-center mt-2">
+                {project.location}
+              </p>
             </div>
           ))}
         </div>

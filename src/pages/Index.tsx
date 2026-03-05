@@ -32,13 +32,8 @@ const sliderImages = [
   "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop",
 ];
 
-type ProjectData = {
-  title: string;
-  location: string;
-  category: string;
-  desc: string;
-  images: string[];
-};
+import { allProjects, ProjectData } from "@/data/projects";
+
 
 const ProjectModal = ({ project, onClose }: { project: ProjectData; onClose: () => void }) => {
   const [imgIdx, setImgIdx] = useState(0);
@@ -439,29 +434,7 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Kiran Gems Pvt. Ltd.",
-                location: "Tarabaug, Surat",
-                category: "Commercial",
-                desc: "Delivered a comprehensive HVAC solution for one of Surat's leading diamond manufacturing firms. The project involved installing high-capacity central air conditioning across the production floors, offices, and showroom areas to ensure a consistently cool and dust-free environment, critical for precision gem-cutting operations.",
-                images: Array.from({ length: 9 }, (_, i) => `/projects/kiran-gems/${i + 1}.avif`)
-              },
-              {
-                title: "Maitri Lab Grown Diamonds",
-                location: "Gajera Circle, Surat",
-                category: "Commercial",
-                desc: "Installed a precision climate control system for Maitri's lab-grown diamond facility. The HVAC setup maintains strict temperature and humidity levels essential for the diamond growing process, along with comfortable working conditions across the office and visitor areas.",
-                images: Array.from({ length: 2 }, (_, i) => `/projects/maitri-diamonds/${i + 1}.avif`)
-              },
-              {
-                title: "Signet Mall",
-                location: "Kamrej",
-                category: "Mall & Retail",
-                desc: "Executed a large-scale centralized air conditioning project for Signet Mall, covering retail outlets, food courts, common areas, and back-of-house zones. The system is designed for energy efficiency and optimal airflow distribution to handle high footfall during peak hours.",
-                images: Array.from({ length: 8 }, (_, i) => `/projects/signet-mall/${i + 1}.avif`)
-              }
-            ].map((project, idx) => (
+            {allProjects.slice(0, 3).map((project, idx) => (
               <ProjectCard key={idx} project={project} />
             ))}
           </div>
