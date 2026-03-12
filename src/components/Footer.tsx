@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook, Youtube } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook, Twitter } from "lucide-react";
 
 const Footer = () => (
   <footer className="relative overflow-hidden" style={{ backgroundColor: '#2171b5' }}>
@@ -39,8 +39,17 @@ const Footer = () => (
             <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white hover:text-[#1877F2] text-white transition-all duration-300 transform hover:scale-110">
               <Facebook className="h-5 w-5" />
             </a>
-            <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white hover:text-[#FF0000] text-white transition-all duration-300 transform hover:scale-110">
-              <Youtube className="h-5 w-5" />
+            <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white hover:text-black text-white transition-all duration-300 transform hover:scale-110">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-5 w-5"
+              >
+                <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.294 19.497h2.039L6.486 3.24H4.298l13.309 17.41z" />
+              </svg>
             </a>
           </div>
         </div>
