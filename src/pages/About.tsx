@@ -10,14 +10,7 @@ const values = [
   { icon: Heart, title: "Integrity", desc: "Transparent pricing, honest communication, and reliable delivery." },
 ];
 
-const milestones = [
-  { year: "2010", event: "Company founded in Mumbai" },
-  { year: "2013", event: "Completed 100th commercial project" },
-  { year: "2016", event: "Expanded to Pune and Ahmedabad" },
-  { year: "2019", event: "Launched industrial chiller division" },
-  { year: "2022", event: "500+ projects milestone reached" },
-  { year: "2025", event: "ISO 9001 certified, 50+ engineers strong" },
-];
+
 
 const About = () => (
   <Layout>
@@ -195,19 +188,7 @@ const About = () => (
         </div>
       </div>
     </section>
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4 max-w-3xl">
-        <h2 className="text-3xl font-bold text-center mb-10">Key Milestones</h2>
-        <div className="space-y-6">
-          {milestones.map((m) => (
-            <div key={m.year} className="flex gap-4 items-start">
-              <div className="bg-accent text-accent-foreground font-bold px-3 py-1 rounded text-sm shrink-0">{m.year}</div>
-              <p className="text-muted-foreground">{m.event}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+
 
     {/* Client Testimonials - Auto-scrolling carousel */}
     <section className="py-20 bg-background overflow-hidden border-y border-border">
