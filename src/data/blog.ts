@@ -7,47 +7,57 @@ export type BlogPost = {
   content: string;
   category?: string;
   readTime?: string;
+  seoKeywords?: string[];
+  metaDescription?: string;
 };
 
 export const blogPosts: BlogPost[] = [
   {
     id: "future-sustainable-cooling",
-    title: "The Future of Sustainable Cooling: Trends to Watch in 2025",
-    excerpt: "As global temperatures rise, the HVAC industry is innovating rapidly. From AI-driven climate control to solar-powered units, discover how the next generation of cooling technology is setting new standards for efficiency.",
+    title: "Future of Sustainable Cooling & Industrial HVAC Trends in India 2025",
+    excerpt: "Explore energy-efficient industrial cooling solutions, AI-driven HVAC systems, and the latest trends in sustainable engineering for commercial spaces in India.",
     date: "2025-02-10",
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
-    category: "Featured Article",
+    category: "Industrial Cooling",
     readTime: "8 min read",
-    content: "The future of cooling is not just about lower temperatures; it's about smarter, greener, and more sustainable engineering. As we approach 2025, three major trends are reshaping the industry:\n\n1. **AI-Driven Climate Control** – Machine learning algorithms now predict occupancy patterns and weather changes to optimize cooling loads in real-time.\n\n2. **Solar-Powered HVAC** – Direct integration with PV panels is making localized cooling systems energy-independent.\n\n3. **Natural Refrigerants** – A shift away from HFCs towards natural refrigerants like CO2 and Ammonia is drastically reducing the carbon footprint of industrial cooling.\n\nAt Shreeji Cooling System, we are at the forefront of these innovations, ensuring our clients stay ahead of the curve."
+    seoKeywords: ["industrial cooling India", "sustainable HVAC trends", "AI climate control", "energy efficient cooling"],
+    metaDescription: "Discovery the future of sustainable industrial cooling and HVAC trends in India for 2025. Expert insights on AI-driven systems and energy efficiency.",
+    content: "The future of cooling is not just about lower temperatures; it's about smarter, greener, and more sustainable engineering. As we approach 2025, three major trends are reshaping the industrial HVAC sector in India:\n\n1. **AI-Driven Climate Control** – Machine learning algorithms now predict occupancy patterns and weather changes to optimize cooling loads in real-time, significantly reducing operational costs.\n\n2. **Solar-Powered HVAC Systems** – Direct integration with PV panels is making localized cooling systems energy-independent, a growing trend in Surat and other solar-rich cities in Gujarat.\n\n3. **Natural Refrigerants & Chilling Plants** – A shift away from HFCs towards natural refrigerants like CO2 and Ammonia is drastically reducing the carbon footprint of industrial chilling plants.\n\nAt Shreeji Cooling System, we are at the forefront of these innovations, ensuring our clients stay ahead of the curve."
   },
   {
     id: "energy-efficient-hvac",
-    title: "5 Ways to Improve Energy Efficiency in Your HVAC System",
-    excerpt: "Discover practical tips to reduce energy consumption and lower your cooling costs without compromising comfort.",
+    title: "5 Best Ways to Improve Energy Efficiency in Commercial HVAC Systems",
+    excerpt: "Practical HVAC maintenance tips for commercial and industrial buildings in Surat to reduce power consumption and cooling costs with Blue Star solutions.",
     date: "2026-01-15",
     image: "/images/blog/energy-efficiency.png",
     category: "Energy Efficiency",
     readTime: "5 min read",
-    content: "Energy efficiency is crucial for commercial HVAC systems. Here are five proven strategies:\n\n1. **Regular Maintenance** – Schedule preventive maintenance to keep equipment running at peak performance.\n\n2. **Smart Thermostats** – Upgrade to programmable thermostats for better temperature control.\n\n3. **Duct Sealing** – Leaky ducts waste up to 30% of cooled air. Proper sealing saves energy.\n\n4. **Equipment Upgrades** – Modern inverter-based systems consume 40% less power than older models.\n\n5. **Zoning Systems** – Cool only occupied areas instead of the entire building.\n\nImplementing these strategies can reduce your HVAC energy costs by 20-40%.",
+    seoKeywords: ["HVAC energy efficiency", "commercial AC maintenance", "Blue Star AC Surat", "lower cooling costs"],
+    metaDescription: "Learn 5 proven ways to improve the energy efficiency of your commercial HVAC systems. Save on electricity bills with expert maintenance tips from Shreeji Cooling.",
+    content: "Energy efficiency is crucial for commercial HVAC systems in India's tropical climate. Here are five proven strategies to optimize your cooling budget:\n\n1. **Regular Preventive Maintenance** – Schedule regular check-ups to keep your VRF or Central AC systems running at peak performance.\n\n2. **Smart Inverter Technology** – Upgrading to Blue Star inverter-based systems can save up to 40% more power than older fixed-speed models.\n\n3. **Duct Sealing & Insulation** – Leaky ducts waste up to 30% of cooled air. Proper sealing is the most cost-effective way to save energy.\n\n4. **Zoning & Automation** – Implement zoning to cool only occupied areas of your office or factory.\n\n5. **Coil & Filter Cleaning** – Dirty coils force the compressor to work harder. Monthly maintenance ensures maximum heat transfer efficiency.\n\nImplementing these strategies can reduce your HVAC energy bill by 20-40% annually."
   },
   {
     id: "choosing-right-chiller",
-    title: "How to Choose the Right Chiller for Your Business",
-    excerpt: "A comprehensive guide to selecting between air-cooled and water-cooled chillers for your commercial facility.",
+    title: "Guide to Choosing the Best Industrial Chiller for Your Business in India",
+    excerpt: "Comprehensive comparison between air-cooled and water-cooled chilling plants. Find the right process cooling solution for your industrial facility.",
     date: "2026-01-02",
     image: "/images/blog/chillers.png",
-    category: "Buying Guide",
+    category: "Industrial Chillers",
     readTime: "7 min read",
-    content: "Choosing the right chiller depends on several factors including building size, climate, and budget.\n\n**Air-Cooled Chillers** are ideal for smaller installations where water availability is limited. They require less maintenance but are slightly less efficient.\n\n**Water-Cooled Chillers** offer higher efficiency for large installations but require cooling towers and water treatment.\n\nConsider factors like initial cost, operating cost, space availability, and noise levels when making your decision.",
+    seoKeywords: ["industrial chilling plant", "water cooled chiller India", "air cooled chiller maintenance", "process cooling solutions"],
+    metaDescription: "Not sure which industrial chiller is right for your plant? Compare air-cooled vs water-cooled chilling plants and find the best fit for your process cooling needs.",
+    content: "Choosing the right industrial chiller is a critical decision for any manufacturing plant or large commercial facility in Surat, Gujarat.\n\n**Air-Cooled Chillers**:\nIdeal for smaller installations where water availability is a concern. They offer lower initial costs and simpler maintenance.\n\n**Water-Cooled chilling plants**:\nOffer significantly higher efficiency for large-scale industrial operations but require a continuous water supply and cooling towers.\n\n**Key Factors for Selection**:\n- **Ambient Conditions** – High temperature zones in Gujarat often favor water-cooled systems for peak performance.\n- **Operational Efficiency** – Consider the life-cycle cost rather than just the initial price.\n- **Space & Noise** – Industrial chillers come in various configurations to fit your site's physical constraints.\n\nShreeji Cooling System specializes in turnkey chilling plant projects, from design to installation."
   },
   {
     id: "hvac-maintenance-tips",
-    title: "Essential HVAC Maintenance Tips for Commercial Buildings",
-    excerpt: "Keep your cooling systems running smoothly with these essential maintenance practices for commercial properties.",
+    title: "Essential HVAC Maintenance Tips: Blue Star AMC Guide for Enterprises",
+    excerpt: "Keep your cooling systems running smoothly with professional AC servicing, refrigerant checks, and Annual Maintenance Contracts (AMC).",
     date: "2025-12-20",
     image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop",
     category: "Maintenance",
     readTime: "4 min read",
-    content: "Regular HVAC maintenance is critical for commercial buildings. Key practices include:\n\n- **Filter Replacement** – Change filters every 1-3 months depending on usage.\n- **Coil Cleaning** – Clean condenser and evaporator coils seasonally.\n- **Refrigerant Checks** – Monitor refrigerant levels to prevent efficiency loss.\n- **Belt Inspection** – Check and replace worn belts in AHUs and blowers.\n- **Drain Cleaning** – Clear condensate drains to prevent water damage.\n\nA well-maintained system lasts 15-20 years and operates 20% more efficiently.",
-  },
+    seoKeywords: ["Blue Star AC AMC", "HVAC maintenance plan", "AC servicing Surat", "industrial compressor repair"],
+    metaDescription: "Professional HVAC maintenance tips and the benefits of Blue Star AMCs for commercial cooling. Ensure long-term reliability and system efficiency.",
+    content: "Regular HVAC maintenance is the backbone of facility management. At Shreeji Cooling System, we recommend these essential practices:\n\n- **Professional AC Servicing** – Quarterly cleaning of filters and coils prevents major breakdowns.\n- **Blue Star AMC Benefits** – An Annual Maintenance Contract ensures genuine spare parts and priority breakdown support.\n- **Refrigerant Level Monitoring** – Low gas levels cause inefficient cooling and can damage the compressor.\n- **Electrical Connection Audits** – Loose wires can cause fire hazards and system malfunctions.\n\nA well-maintained industrial HVAC system lasts up to 20 years and maintains its original efficiency rating throughout its life."
+  }
 ];

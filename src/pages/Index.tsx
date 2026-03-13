@@ -186,9 +186,55 @@ const ProjectCard = ({ project }: { project: ProjectData }) => {
 
 
 const Index = () => {
-
   return (
-    <Layout>
+    <Layout
+      title="Best Industrial & Commercial HVAC Solutions in Surat | Shreeji Cooling"
+      description="Shreeji Cooling System Pvt. Ltd. is a leading Blue Star authorised HVAC dealer in Surat, Gujarat. We provide expert installation, maintenance, and turnkey projects for industrial chilling plants, VRF systems, and commercial air conditioning."
+      keywords="HVAC services Surat, Blue Star authorised dealer Gujarat, industrial cooling solutions India, commercial air conditioning Surat, VRF system installation, chilling plant manufacturers"
+    >
+      {/* Schema.org markup for Local Business */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HVACBusiness",
+          "name": "Shreeji Cooling System Pvt. Ltd.",
+          "image": "https://www.shreejicooling.com/shreeji-logo.png",
+          "@id": "https://www.shreejicooling.com",
+          "url": "https://www.shreejicooling.com",
+          "telephone": "+91-XXXXXXXXXX",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Your Office Address",
+            "addressLocality": "Surat",
+            "addressRegion": "GJ",
+            "postalCode": "395001",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 21.1702,
+            "longitude": 72.8311
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+          },
+          "sameAs": [
+            "https://www.facebook.com/shreejicoolingsystem",
+            "https://www.instagram.com/shreejicoolingsystem",
+            "https://www.linkedin.com/company/shreejicoolingsystem"
+          ]
+        })}
+      </script>
       {/* Hero Section - Full width with #2171b5 background and noise texture */}
       <section className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-12 md:pt-32 md:pb-20" style={{ backgroundColor: '#2171b5' }}>
         {/* Noise texture overlay */}
@@ -203,8 +249,8 @@ const Index = () => {
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight tracking-tight text-white">
-                Industrial & Commercial<br />
-                Air Conditioning Systems
+                Best Industrial & Commercial<br />
+                HVAC Solutions in Surat
               </h1>
 
               <p className="text-base md:text-lg lg:text-xl text-white/90 max-w-2xl mb-7 md:mb-10 leading-relaxed mx-auto lg:mx-0">

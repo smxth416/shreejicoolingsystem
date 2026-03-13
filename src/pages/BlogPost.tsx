@@ -19,7 +19,35 @@ const BlogPost = () => {
   }
 
   return (
-    <Layout>
+    <Layout 
+      title={post.title} 
+      description={post.metaDescription || post.excerpt}
+      keywords={post.seoKeywords?.join(", ")}
+    >
+      {/* Structured Data for SEO */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": post.title,
+          "description": post.metaDescription || post.excerpt,
+          "image": post.image,
+          "author": {
+            "@type": "Organization",
+            "name": "Shreeji Cooling System"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Shreeji Cooling System",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.shreejicooling.com/shreeji-logo.png"
+            }
+          },
+          "datePublished": post.date
+        })}
+      </script>
+
       <section className="relative overflow-hidden bg-[#2171b5] border-b border-white/10 py-16 pt-32">
         {/* Noise texture overlay */}
         <div className="absolute inset-0 noise-texture opacity-60"></div>

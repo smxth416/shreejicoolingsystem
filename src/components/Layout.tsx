@@ -1,12 +1,46 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import FloatingInquiry from "./FloatingInquiry";
 import ScrollToTop from "./ScrollToTop";
 import { useLocation } from "react-router-dom";
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
+
+const Layout = ({ children, title, description, keywords }: LayoutProps) => {
   const { pathname } = useLocation();
+
+  useEffect(() => {
+    // Standard SEO Update
+    const defaultTitle = "Shreeji Cooling System - Leading HVAC Solutions in Surat, India";
+    const baseDescription = "Shreeji Cooling System Pvt. Ltd. provides expert HVAC installation, industrial chilling plants, and commercial cooling maintenance services in Surat, Gujarat.";
+
+    document.title = title ? `${title} | Shreeji Cooling` : defaultTitle;
+
+    // Meta Description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', description || baseDescription);
+
+    // Meta Keywords
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute('name', 'keywords');
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute('content', keywords || "HVAC services, industrial cooling, Blue Star AC, Surat cooling solutions, chilling plant");
+
+  }, [title, description, keywords]);
 
   return (
     <div className="min-h-screen flex flex-col relative">

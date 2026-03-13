@@ -10,56 +10,89 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"; 
 
+import * as Icons from "lucide-react";
+
 const Services = () => (
-  <Layout>
-    <section className="relative overflow-hidden bg-[#2171b5] border-b border-white/10 py-20 pt-32">
-      {/* Noise texture overlay */}
+  <Layout
+    title="Premium HVAC Services & Maintenance | Shreeji Cooling"
+    description="Explore our range of professional HVAC services including installation, AMC, preventive maintenance, and industrial breakdown support. Quality solutions from authorized Blue Star dealers."
+    keywords="HVAC services, AC installation Surat, commercial AC maintenance, Blue Star AMC, breakdown repair"
+  >
+    <section className="relative overflow-hidden bg-[#2171b5] border-b border-white/10 py-24 pt-36">
       <div className="absolute inset-0 noise-texture opacity-60"></div>
+      
+      {/* Background Decorative Text */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-black text-white/[0.03] select-none whitespace-nowrap z-0 pointer-events-none uppercase">
+        Shreeji Excellence
+      </div>
+
       <div className="w-full px-6 md:px-12 lg:px-24 text-center relative z-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Our Services</h1>
-        <p className="text-lg text-white/90 max-w-2xl mx-auto">Comprehensive HVAC services from installation to maintenance for commercial and industrial projects.</p>
+        <h1 className="text-4xl md:text-6xl font-black mb-6 text-white tracking-tight uppercase">
+          Our Professional Services
+        </h1>
+        <p className="text-xl text-white/85 max-w-3xl mx-auto leading-relaxed font-medium">
+          Delivering precision engineering and world-class maintenance for industrial, commercial, and residential HVAC systems.
+        </p>
       </div>
     </section>
 
-    <section className="py-20 bg-background">
-      <div className="w-full px-6 md:px-12 lg:px-24 max-w-7xl mx-auto space-y-20">
-        {services.map((s, i) => (
-          <div
-            key={s.title}
-            className={`flex flex-col lg:flex-row gap-12 items-center ${i % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}
-          >
-            {/* Image */}
-            <div className="w-full lg:w-[420px] xl:w-[460px] shrink-0 rounded-2xl overflow-hidden shadow-sm">
-              <img
-                src={s.image}
-                alt={s.title}
-                className="w-full aspect-[4/3] object-cover hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-              />
-            </div>
+    <section className="py-24 bg-background relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -mr-48 -mt-48 opacity-50"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -ml-48 -mb-48 opacity-50"></div>
 
-            {/* Content */}
-            <div className="flex-1 min-w-0">
-              <p className="text-[10px] uppercase tracking-widest text-accent font-semibold mb-3">Service {String(i + 1).padStart(2, "0")}</p>
-              <h2 className="text-3xl font-bold mb-4 leading-tight">{s.title}</h2>
-              <p className="text-muted-foreground text-base leading-relaxed mb-7">{s.description}</p>
-              <ul className="space-y-3 mb-8">
-                {s.features.map((f) => (
-                  <li key={f} className="flex items-center gap-3">
-                    <CheckCircle className="h-4 w-4 text-accent shrink-0" />
-                    <span className="text-sm font-medium">{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link to="/contact">
-                <Button className="bg-primary text-primary-foreground font-semibold px-7 hover:bg-primary/90">
-                  Get a Quote
-                </Button>
-              </Link>
-            </div>
-          </div>
-        ))}
+      <div className="w-full px-6 md:px-12 lg:px-24">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {services.map((s, i) => {
+            // @ts-ignore
+            const Icon = Icons[s.iconName] || Icons.RotateCcw;
+            return (
+              <div
+                key={s.title}
+                className="group relative flex flex-col bg-card border border-border/60 rounded-3xl p-8 pt-12 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 overflow-hidden border-t-4 border-t-primary/20 hover:border-t-primary"
+              >
+                {/* Noise texture overlay on hover */}
+                <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none"></div>
+
+                {/* Decorative Number Background */}
+                <div className="absolute top-4 right-8 text-7xl font-black text-foreground/[0.04] group-hover:text-primary/10 transition-colors duration-500 pointer-events-none">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+
+                <div className="mb-8 relative shrink-0">
+                  <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:rotate-6 shadow-sm">
+                    <Icon size={32} strokeWidth={1.5} />
+                  </div>
+                </div>
+
+                <div className="relative z-10 flex-1 flex flex-col">
+                  <h2 className="text-2xl font-extrabold mb-4 leading-tight text-foreground group-hover:text-primary transition-colors">
+                    {s.title}
+                  </h2>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-8 flex-1">
+                    {s.description}
+                  </p>
+                  
+                  <div className="space-y-3 border-t border-border/50 pt-6 mt-auto">
+                    {s.features.slice(0, 3).map((f) => (
+                      <div key={f} className="flex items-center gap-3">
+                        <Icons.CheckCircle2 className="h-4 w-4 text-primary/60 shrink-0" />
+                        <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">{f}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Link to="/contact" className="mt-8">
+                    <Button variant="outline" className="w-full rounded-2xl font-bold border-2 hover:bg-primary hover:text-white transition-all group-hover:border-primary">
+                      Inquire Now
+                      <Icons.ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
 

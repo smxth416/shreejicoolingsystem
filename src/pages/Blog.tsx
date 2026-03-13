@@ -15,13 +15,17 @@ interface BlogPost {
 import { blogPosts } from "@/data/blog";
 
 const Blog = () => (
-  <Layout>
+  <Layout 
+    title="HVAC Blog & Insights - Industrial Cooling Services Surat" 
+    description="Stay updated with the latest HVAC maintenance tips, industrial cooling solutions, and Blue Star AC service insights from Shreeji Cooling System Surat."
+    keywords="HVAC blog India, industrial cooling tips, Blue Star AC services Surat, AMC for commercial AC"
+  >
     <section className="relative overflow-hidden bg-[#2171b5] border-b border-white/10 py-20 pt-32">
       {/* Noise texture overlay */}
       <div className="absolute inset-0 noise-texture opacity-60"></div>
       <div className="w-full px-6 md:px-12 lg:px-24 text-center relative z-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Blog & Insights</h1>
-        <p className="text-lg text-white/90 max-w-2xl mx-auto">HVAC tips, industry news, and expert advice for your cooling needs.</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">HVAC Insights & Industrial Cooling Blog</h1>
+        <p className="text-lg text-white/90 max-w-2xl mx-auto">Expert HVAC maintenance tips, industry news, and Blue Star cooling advice for your business.</p>
       </div>
     </section>
 
@@ -69,7 +73,11 @@ const Blog = () => (
             {blogPosts.slice(1).map((post, i) => (
               <article key={post.id} className="flex flex-col bg-card border rounded-2xl overflow-hidden hover:shadow-lg transition-all group">
                 <div className="relative overflow-hidden aspect-video">
-                  <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img
+                  src={post.image}
+                  alt={`${post.title} - HVAC Solution by Shreeji Cooling`}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
                   <div className="absolute top-4 left-4 bg-background/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium border">{post.category || "General"}</div>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
