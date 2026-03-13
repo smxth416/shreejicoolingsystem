@@ -29,41 +29,51 @@ const Blog = () => (
       <div className="w-full px-6 md:px-12 lg:px-24">
         {/* Featured Post (New) */}
         <div className="mb-16">
-          <div className="grid lg:grid-cols-2 gap-8 items-center bg-card rounded-3xl overflow-hidden shadow-lg border">
-            <div className="h-full min-h-[300px]">
-              <img
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop"
-                alt="Future of HVAC"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="p-8 lg:p-12">
-              <div className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">Featured Article</div>
-              <h2 className="text-3xl font-bold mb-4 hover:text-primary transition-colors cursor-pointer">The Future of Sustainable Cooling: Trends to Watch in 2025</h2>
-              <p className="text-muted-foreground mb-6 line-clamp-3">As global temperatures rise, the HVAC industry is innovating rapidly. From AI-driven climate control to solar-powered units, discover how the next generation of cooling technology is setting new standards for efficiency.</p>
-              <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
-                <span>By Dr. A. Sharma</span>
-                <span>•</span>
-                <span>Feb 10, 2025</span>
-                <span>•</span>
-                <span>8 min read</span>
+          {blogPosts.length > 0 && (
+            <div className="grid lg:grid-cols-2 gap-8 items-center bg-card rounded-3xl overflow-hidden shadow-lg border">
+              <div className="h-full min-h-[300px]">
+                <img
+                  src={blogPosts[0].image}
+                  alt={blogPosts[0].title}
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <Button>Read Full Article</Button>
+              <div className="p-8 lg:p-12">
+                <div className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-4">
+                  {blogPosts[0].category || "Featured Article"}
+                </div>
+                <Link to={`/blog/${blogPosts[0].id}`}>
+                  <h2 className="text-3xl font-bold mb-4 hover:text-primary transition-colors cursor-pointer">
+                    {blogPosts[0].title}
+                  </h2>
+                </Link>
+                <p className="text-muted-foreground mb-6 line-clamp-3">
+                  {blogPosts[0].excerpt}
+                </p>
+                <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
+                  <span>By Shreeji Editorial</span>
+                  <span>•</span>
+                  <span>{blogPosts[0].readTime || "8 min read"}</span>
+                </div>
+                <Link to={`/blog/${blogPosts[0].id}`}>
+                  <Button>Read Full Article</Button>
+                </Link>
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Main Blog Grid */}
           <div className="lg:col-span-2 grid md:grid-cols-2 gap-8">
-            {blogPosts.map((post, i) => (
+            {blogPosts.slice(1).map((post, i) => (
               <article key={post.id} className="flex flex-col bg-card border rounded-2xl overflow-hidden hover:shadow-lg transition-all group">
                 <div className="relative overflow-hidden aspect-video">
                   <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute top-4 left-4 bg-background/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium border">{post.category || "General"}</div>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
-                  <div className="text-sm text-muted-foreground mb-2">{new Date(post.date).toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })} • {post.readTime || "5 min read"}</div>
+                  <div className="text-sm text-muted-foreground mb-2">{post.readTime || "5 min read"}</div>
                   <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors line-clamp-2">{post.title}</h3>
                   <p className="text-muted-foreground text-sm line-clamp-3 mb-4 flex-1">{post.excerpt}</p>
                   <Link to={`/blog/${post.id}`} className="px-0 w-fit text-primary inline-flex items-center">Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>

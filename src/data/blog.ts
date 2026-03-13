@@ -11,11 +11,21 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "future-sustainable-cooling",
+    title: "The Future of Sustainable Cooling: Trends to Watch in 2025",
+    excerpt: "As global temperatures rise, the HVAC industry is innovating rapidly. From AI-driven climate control to solar-powered units, discover how the next generation of cooling technology is setting new standards for efficiency.",
+    date: "2025-02-10",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
+    category: "Featured Article",
+    readTime: "8 min read",
+    content: "The future of cooling is not just about lower temperatures; it's about smarter, greener, and more sustainable engineering. As we approach 2025, three major trends are reshaping the industry:\n\n1. **AI-Driven Climate Control** – Machine learning algorithms now predict occupancy patterns and weather changes to optimize cooling loads in real-time.\n\n2. **Solar-Powered HVAC** – Direct integration with PV panels is making localized cooling systems energy-independent.\n\n3. **Natural Refrigerants** – A shift away from HFCs towards natural refrigerants like CO2 and Ammonia is drastically reducing the carbon footprint of industrial cooling.\n\nAt Shreeji Cooling System, we are at the forefront of these innovations, ensuring our clients stay ahead of the curve."
+  },
+  {
     id: "energy-efficient-hvac",
     title: "5 Ways to Improve Energy Efficiency in Your HVAC System",
     excerpt: "Discover practical tips to reduce energy consumption and lower your cooling costs without compromising comfort.",
     date: "2026-01-15",
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&h=600&fit=crop",
+    image: "/images/blog/energy-efficiency.png",
     category: "Energy Efficiency",
     readTime: "5 min read",
     content: "Energy efficiency is crucial for commercial HVAC systems. Here are five proven strategies:\n\n1. **Regular Maintenance** – Schedule preventive maintenance to keep equipment running at peak performance.\n\n2. **Smart Thermostats** – Upgrade to programmable thermostats for better temperature control.\n\n3. **Duct Sealing** – Leaky ducts waste up to 30% of cooled air. Proper sealing saves energy.\n\n4. **Equipment Upgrades** – Modern inverter-based systems consume 40% less power than older models.\n\n5. **Zoning Systems** – Cool only occupied areas instead of the entire building.\n\nImplementing these strategies can reduce your HVAC energy costs by 20-40%.",
@@ -25,7 +35,7 @@ export const blogPosts: BlogPost[] = [
     title: "How to Choose the Right Chiller for Your Business",
     excerpt: "A comprehensive guide to selecting between air-cooled and water-cooled chillers for your commercial facility.",
     date: "2026-01-02",
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop",
+    image: "/images/blog/chillers.png",
     category: "Buying Guide",
     readTime: "7 min read",
     content: "Choosing the right chiller depends on several factors including building size, climate, and budget.\n\n**Air-Cooled Chillers** are ideal for smaller installations where water availability is limited. They require less maintenance but are slightly less efficient.\n\n**Water-Cooled Chillers** offer higher efficiency for large installations but require cooling towers and water treatment.\n\nConsider factors like initial cost, operating cost, space availability, and noise levels when making your decision.",
