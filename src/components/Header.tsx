@@ -30,6 +30,10 @@ const Header = () => {
 
   // const isHomePage = location.pathname === "/"; // Logic removed to apply home styling to all pages
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <header className="sticky top-4 z-50 px-4">
       <div className="container mx-auto">
@@ -40,7 +44,7 @@ const Header = () => {
           <div className="absolute inset-0 noise-texture opacity-60 rounded-full"></div>
 
           <div className="flex items-center justify-between relative z-10">
-            <Link to="/" className="flex items-center gap-2">
+            <Link to="/" onClick={scrollToTop} className="flex items-center gap-2">
               <div className="bg-white px-4 py-2 rounded-full shadow-sm">
                 <img
                   src="/shreeji-logo.png"
@@ -56,6 +60,7 @@ const Header = () => {
                 <Link
                   key={l.to}
                   to={l.to}
+                  onClick={scrollToTop}
                   className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${location.pathname === l.to
                     ? "text-white bg-primary shadow-md"
                     : "text-white/95 hover:bg-white/20 hover:text-white"
@@ -67,7 +72,7 @@ const Header = () => {
             </nav>
 
             <div className="hidden lg:block">
-              <Link to="/contact">
+              <Link to="/contact" onClick={scrollToTop}>
                 <Button
                   className="rounded-full px-6 shadow-md transition-all font-semibold bg-white text-[#2171b5] hover:bg-white/90"
                 >
@@ -98,14 +103,20 @@ const Header = () => {
               <Link
                 key={l.to}
                 to={l.to}
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  setOpen(false);
+                  scrollToTop();
+                }}
                 className={`block py-3 px-4 text-sm font-medium rounded-full transition-colors mb-1 ${location.pathname === l.to ? "text-primary-foreground bg-primary" : "text-muted-foreground hover:bg-muted"
                   }`}
               >
                 {l.label}
               </Link>
             ))}
-            <Link to="/contact" onClick={() => setOpen(false)}>
+            <Link to="/contact" onClick={() => {
+              setOpen(false);
+              scrollToTop();
+            }}>
               <Button className="w-full mt-3 bg-primary text-primary-foreground rounded-full">Get a Quote</Button>
             </Link>
           </div>
