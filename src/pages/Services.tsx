@@ -21,10 +21,6 @@ const Services = () => (
     <section className="relative overflow-hidden bg-[#2171b5] border-b border-white/10 py-24 pt-36">
       <div className="absolute inset-0 noise-texture opacity-60"></div>
       
-      {/* Background Decorative Text */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-black text-white/[0.03] select-none whitespace-nowrap z-0 pointer-events-none uppercase">
-        Shreeji Excellence
-      </div>
 
       <div className="w-full px-6 md:px-12 lg:px-24 text-center relative z-10">
         <h1 className="text-4xl md:text-6xl font-black mb-6 text-white tracking-tight uppercase">
@@ -54,10 +50,6 @@ const Services = () => (
                 {/* Noise texture overlay on hover */}
                 <div className="absolute inset-0 noise-texture opacity-0 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none"></div>
 
-                {/* Decorative Number Background */}
-                <div className="absolute top-4 right-8 text-7xl font-black text-foreground/[0.04] group-hover:text-primary/10 transition-colors duration-500 pointer-events-none">
-                  {String(i + 1).padStart(2, "0")}
-                </div>
 
                 <div className="mb-8 relative shrink-0">
                   <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:rotate-6 shadow-sm">
