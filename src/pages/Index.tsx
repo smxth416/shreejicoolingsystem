@@ -25,12 +25,8 @@ const industries = [
   { icon: Store, label: "Large Stores" },
 ];
 
-// Placeholder images for the slider - replace with actual HVAC images
-const sliderImages = [
-  "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop",
-];
+// Video link - user can replace this placeholder
+const HERO_VIDEO_URL = "/hero.mp4";
 
 import { allProjects, ProjectData } from "@/data/projects";
 
@@ -190,15 +186,6 @@ const ProjectCard = ({ project }: { project: ProjectData }) => {
 
 
 const Index = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % sliderImages.length);
-    }, 2500); // 2.5 seconds
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <Layout>
@@ -239,26 +226,18 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Right Side - Auto-sliding Image Carousel */}
+            {/* Right Side - Hero Video */}
             <div className="relative w-full max-h-[280px] sm:max-h-none lg:block">
-              <div className="relative rounded-[3rem] overflow-hidden shadow-2xl aspect-[4/3]">
-                {/* Image slider */}
-                {sliderImages.map((image, index) => (
-                  <div
-                    key={index}
-                    className="absolute inset-0 transition-opacity duration-1000"
-                    style={{
-                      opacity: currentImageIndex === index ? 1 : 0,
-                      zIndex: currentImageIndex === index ? 1 : 0,
-                    }}
-                  >
-                    <img
-                      src={image}
-                      alt={`HVAC Solution ${index + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
+              <div className="relative rounded-[3rem] overflow-hidden shadow-2xl aspect-video bg-black">
+                {/* Video element */}
+                <video
+                  src={HERO_VIDEO_URL}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-contain"
+                />
 
                 {/* Decorative gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#2171b5]/20 via-transparent to-white/10 pointer-events-none"></div>
@@ -267,21 +246,6 @@ const Index = () => {
               {/* Decorative elements */}
               <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-white/20 rounded-full blur-3xl"></div>
               <div className="absolute -top-8 -left-8 w-48 h-48 bg-white/15 rounded-full blur-3xl"></div>
-
-              {/* Slider indicators */}
-              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
-                {sliderImages.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentImageIndex(index)}
-                    className={`w-2.5 h-2.5 rounded-full transition-all ${currentImageIndex === index
-                      ? "bg-white w-8"
-                      : "bg-white/50 hover:bg-white/75"
-                      }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
             </div>
           </div>
         </div>
