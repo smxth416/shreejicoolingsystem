@@ -153,7 +153,7 @@ const Services = () => (
         <div className="text-center mt-12">
           <p className="text-muted-foreground mb-4">Still have questions? We're happy to help.</p>
           <Link to="/contact">
-            <Button size="lg" className="bg-primary text-primary-foreground font-semibold px-8 rounded-full shadow-md hover:shadow-lg transition-all">
+            <Button size="lg" className="bg-[#2171b5] text-primary-foreground font-semibold px-8 rounded-full shadow-md hover:shadow-lg transition-all hover:bg-[#2171b5]/90">
               Contact Our Team
             </Button>
           </Link>

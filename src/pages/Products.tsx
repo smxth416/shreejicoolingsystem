@@ -137,11 +137,13 @@ const Products = () => {
         <div className="w-full px-6 md:px-12 lg:px-24">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <img
-                src="https://images.unsplash.com/photo-1581093583449-ed2521344db5?w=800&h=600&fit=crop"
-                alt="Industrial Installation"
-                className="rounded-3xl shadow-2xl"
-              />
+              <div className="w-full flex items-center justify-center overflow-hidden h-72 md:h-96">
+                <img
+                  src="/industry_line_art.png"
+                  alt="Industrial Sectors Overview"
+                  className="w-full h-full object-contain scale-[2] md:scale-[1.8] mix-blend-darken opacity-90"
+                />
+              </div>
             </div>
             <div className="order-1 lg:order-2">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Designed for Every Industry</h2>
