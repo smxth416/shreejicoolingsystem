@@ -72,13 +72,12 @@ const Header = () => {
             </nav>
 
             <div className="hidden lg:block">
-              <Link to="/contact" onClick={scrollToTop}>
-                <Button
-                  className="rounded-full px-6 shadow-md transition-all font-semibold bg-white text-[#2171b5] hover:bg-white/90"
-                >
-                  Get a Quote
-                </Button>
-              </Link>
+              <Button
+                onClick={() => window.dispatchEvent(new Event("openFreeInquiry"))}
+                className="rounded-full px-6 shadow-md transition-all font-semibold bg-white text-[#2171b5] hover:bg-white/90"
+              >
+                Free Inquiry
+              </Button>
             </div>
 
             {/* Mobile toggle */}
@@ -113,12 +112,15 @@ const Header = () => {
                 {l.label}
               </Link>
             ))}
-            <Link to="/contact" onClick={() => {
-              setOpen(false);
-              scrollToTop();
-            }}>
-              <Button className="w-full mt-3 bg-primary text-primary-foreground rounded-full">Get a Quote</Button>
-            </Link>
+            <Button 
+              onClick={() => {
+                setOpen(false);
+                window.dispatchEvent(new Event("openFreeInquiry"));
+              }} 
+              className="w-full mt-3 bg-primary text-primary-foreground rounded-full"
+            >
+              Free Inquiry
+            </Button>
           </div>
         )}
       </div>

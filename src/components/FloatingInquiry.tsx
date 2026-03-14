@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MessageSquare, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,6 +11,12 @@ const FloatingInquiry = () => {
   const [category, setCategory] = useState("residential");
   const { toast } = useToast();
 
+  useEffect(() => {
+    const handleOpen = () => setOpen(true);
+    window.addEventListener("openFreeInquiry", handleOpen);
+    return () => window.removeEventListener("openFreeInquiry", handleOpen);
+  }, []);
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     toast({ title: "Inquiry Sent!", description: "We'll get back to you shortly." });
@@ -19,16 +25,6 @@ const FloatingInquiry = () => {
 
   return (
     <>
-      {/* Floating button */}
-      <button
-        onClick={() => setOpen(!open)}
-        className="fixed right-0 top-1/2 -translate-y-1/2 z-40 bg-accent text-accent-foreground px-3 py-4 rounded-l-lg shadow-lg hover:shadow-xl transition-shadow flex flex-col items-center gap-1 text-xs font-semibold"
-        style={{ writingMode: "vertical-lr" }}
-      >
-        <MessageSquare className="h-5 w-5 rotate-90 mb-1" />
-        Free Inquiry
-      </button>
-
       {/* Modal */}
       {open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/40 backdrop-blur-sm p-4">

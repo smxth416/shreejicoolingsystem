@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook, Twitter } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook } from "lucide-react";
 
 const Footer = () => (
   <footer className="relative overflow-hidden text-white" style={{ backgroundColor: '#2171b5' }}>
@@ -26,14 +26,20 @@ const Footer = () => (
                 { icon: Instagram, color: "hover:bg-[#E1306C]", href: "#" },
                 { icon: Linkedin, color: "hover:bg-[#0077B5]", href: "#" },
                 { icon: Facebook, color: "hover:bg-[#1877F2]", href: "#" },
-                { icon: Twitter, color: "hover:bg-black", href: "#" }
+                { icon: 'X', color: "hover:bg-black", href: "#" }
               ].map((social, i) => (
                 <a
                   key={i}
                   href={social.href}
                   className={`w-10 h-10 rounded-lg flex items-center justify-center border border-white/10 bg-white/5 transition-all duration-300 ${social.color} hover:border-transparent hover:-translate-y-1`}
                 >
-                  <social.icon className="h-5 w-5" />
+                  {social.icon === 'X' ? (
+                    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current">
+                      <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                    </svg>
+                  ) : (
+                    <social.icon className="h-5 w-5" />
+                  )}
                 </a>
               ))}
               <a href="#" className="w-10 h-10 rounded-lg flex items-center justify-center border border-white/10 bg-white/5 transition-all duration-300 hover:bg-[#25D366] hover:border-transparent hover:-translate-y-1">
