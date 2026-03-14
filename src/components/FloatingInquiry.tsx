@@ -107,7 +107,7 @@ const FloatingInquiry = () => {
               </div>
 
               <div className="pt-2">
-                <Button type="submit" className="w-48 bg-[#007bc4] hover:bg-[#007bc4]/90 text-white py-6 rounded-2xl text-base font-medium">
+                <Button type="submit" className="w-48 bg-primary hover:bg-primary/90 text-primary-foreground py-6 rounded-2xl text-base font-medium">
                   Submit
                 </Button>
               </div>

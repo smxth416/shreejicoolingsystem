@@ -424,7 +424,7 @@ const Index = () => {
                 ))}
               </ul>
               <Link to="/about">
-                <Button variant="default" size="lg" className="rounded-full px-8">
+                <Button variant="default" size="lg" className="rounded-full px-8 bg-[#2171b5] hover:bg-[#2171b5]/90 text-white">
                   Learn More About Us
                 </Button>
               </Link>

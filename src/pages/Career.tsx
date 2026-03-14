@@ -45,7 +45,6 @@ const Career = () => {
       <section className="py-16 bg-background">
         <div className="w-full px-6 md:px-12 lg:px-24">
           <div className="text-center mb-12">
-            <p className="text-[10px] uppercase tracking-widest text-[#2171b5] font-semibold mb-2">Open Positions</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-3">We're Hiring</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Explore our current openings and take the next step in your career with Shreeji Cooling System.

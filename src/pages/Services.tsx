@@ -8,7 +8,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"; 
+} from "@/components/ui/accordion";
 
 import * as Icons from "lucide-react";
 
@@ -20,10 +20,10 @@ const Services = () => (
   >
     <section className="relative overflow-hidden bg-[#2171b5] border-b border-white/10 py-24 pt-36">
       <div className="absolute inset-0 noise-texture opacity-60"></div>
-      
+
 
       <div className="w-full px-6 md:px-12 lg:px-24 text-center relative z-10">
-        <h1 className="text-4xl md:text-6xl font-black mb-6 text-white tracking-tight uppercase">
+        <h1 className="text-4xl md:text-6xl font-black mb-6 text-white tracking-tight">
           Our Professional Services
         </h1>
         <p className="text-xl text-white/85 max-w-3xl mx-auto leading-relaxed font-medium">
@@ -64,7 +64,7 @@ const Services = () => (
                   <p className="text-muted-foreground text-sm leading-relaxed mb-8 flex-1">
                     {s.description}
                   </p>
-                  
+
                   <div className="space-y-3 border-t border-border/50 pt-6 mt-auto">
                     {s.features.slice(0, 3).map((f) => (
                       <div key={f} className="flex items-center gap-3">
