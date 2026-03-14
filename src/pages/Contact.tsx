@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,6 +8,7 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const [category, setCategory] = useState("residential");
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -103,15 +104,22 @@ const Contact = () => {
                 <label className="text-sm font-medium text-muted-foreground mb-2 block">Category *</label>
                 <div className="flex gap-6">
                   <label className="flex items-center gap-2 cursor-pointer">
-                    <input type="radio" name="category" value="residential" className="w-4 h-4 text-primary" required />
+                    <input type="radio" name="category" value="residential" checked={category === "residential"} onChange={(e) => setCategory(e.target.value)} className="w-4 h-4 text-primary" required />
                     <span className="text-sm">Residential</span>
                   </label>
                   <label className="flex items-center gap-2 cursor-pointer">
-                    <input type="radio" name="category" value="commercial" className="w-4 h-4 text-primary" required />
+                    <input type="radio" name="category" value="commercial" checked={category === "commercial"} onChange={(e) => setCategory(e.target.value)} className="w-4 h-4 text-primary" required />
                     <span className="text-sm">Commercial</span>
                   </label>
                 </div>
               </div>
+
+              {category === "commercial" && (
+                <div>
+                  <label className="text-sm font-medium text-muted-foreground mb-1.5 block">Business / Organization</label>
+                  <Input placeholder="Business / Organization" />
+                </div>
+              )}
 
               <div>
                 <label className="text-sm font-medium text-muted-foreground mb-1.5 block">Interested In *</label>
@@ -140,85 +148,16 @@ const Contact = () => {
                 <Input type="tel" placeholder="+91 XXXXX XXXXX" required />
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="text-sm font-medium text-muted-foreground mb-1.5 block">City</label>
-                  <Input placeholder="Your city" />
-                </div>
-                <div>
-                  <label className="text-sm font-medium text-muted-foreground mb-1.5 block">Company</label>
-                  <Input placeholder="Company (optional)" />
-                </div>
-              </div>
-
-              <div>
-                <label className="text-sm font-medium text-muted-foreground mb-1.5 block">Project Type</label>
-                <Select>
-                  <SelectTrigger><SelectValue placeholder="Select project type" /></SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="new">New Installation</SelectItem>
-                    <SelectItem value="replacement">Replacement/Upgrade</SelectItem>
-                    <SelectItem value="repair">Repair/Service</SelectItem>
-                    <SelectItem value="consultation">Consultation Only</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="text-sm font-medium text-muted-foreground mb-1.5 block">Timeline</label>
-                  <Select>
-                    <SelectTrigger><SelectValue placeholder="When needed?" /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="urgent">Urgent (Within 1 week)</SelectItem>
-                      <SelectItem value="month">Within 1 month</SelectItem>
-                      <SelectItem value="quarter">1-3 months</SelectItem>
-                      <SelectItem value="planning">Just planning</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div>
-                  <label className="text-sm font-medium text-muted-foreground mb-1.5 block">Budget Range</label>
-                  <Select>
-                    <SelectTrigger><SelectValue placeholder="Approx. budget" /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="under-1l">Under ₹1 Lakh</SelectItem>
-                      <SelectItem value="1-5l">₹1-5 Lakhs</SelectItem>
-                      <SelectItem value="5-10l">₹5-10 Lakhs</SelectItem>
-                      <SelectItem value="10-25l">₹10-25 Lakhs</SelectItem>
-                      <SelectItem value="25l-plus">₹25 Lakhs+</SelectItem>
-                      <SelectItem value="not-sure">Not Sure</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-
-              <div>
-                <label className="text-sm font-medium text-muted-foreground mb-2 block">Preferred Contact Method</label>
-                <div className="flex gap-6">
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <input type="radio" name="contact-method" value="phone" className="w-4 h-4 text-primary" />
-                    <span className="text-sm">Phone Call</span>
-                  </label>
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <input type="radio" name="contact-method" value="email" className="w-4 h-4 text-primary" />
-                    <span className="text-sm">Email</span>
-                  </label>
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <input type="radio" name="contact-method" value="whatsapp" className="w-4 h-4 text-primary" />
-                    <span className="text-sm">WhatsApp</span>
-                  </label>
-                </div>
-              </div>
-
               <div>
                 <label className="text-sm font-medium text-muted-foreground mb-1.5 block">Remark *</label>
                 <Textarea placeholder="Tell us about your requirements, site details, or any specific questions..." rows={4} required />
               </div>
 
-              <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-6 text-base font-semibold">
-                Submit Inquiry
-              </Button>
+              <div className="pt-2">
+                <Button type="submit" className="w-48 bg-[#007bc4] hover:bg-[#007bc4]/90 text-white py-6 rounded-2xl text-base font-medium">
+                  Submit
+                </Button>
+              </div>
             </form>
           </div>
 
